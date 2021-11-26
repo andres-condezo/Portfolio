@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --white-color: #FFF;
+  --neutral-color: #28352F;
+  --primary-blue: #172B4D;
+  --primary-green: #36B37E;
+  --secundary-green: #C5E9DA;
+  --tertiary-green: #EBF0EE;
+  --font-sans: 'Inter', sans-serif;
+  }
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting font family and size */
+html {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 62.5%;
+}
+
+/* Setting mobile first styles */
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+header {
+  margin: 1rem 2rem;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+  list-style-type: none;
+}
+
+header nav ul li a {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--neutral-color);
+  text-decoration: none;
+}
+
+header nav .nav__button {
+  margin-right: 1rem;
+}
+
+main {
+  background-image: url(../img/header-illsutration-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary {
+  width: 32.7rem;
+  margin-top: 6rem;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 5.2rem;
+  color: var(--primary-blue);
+  text-align: center;
+}
+
+.primary span {
+  color: var(--primary-green);
+}
+
+.supporting-text {
+  width: 90%;
+  text-align: center;
+  color: var(--neutral-color);
+  width: 85%;
+  margin: 4rem;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+.social-media {
+  display: flex;
+  margin: 4rem;
+}
+
+.social-media ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.social-media a {
+  color: var(--neutral-color);
+  margin-right: 2rem;
+}
+
+.down-button {
+  color: var(--neutral-color);
+}
