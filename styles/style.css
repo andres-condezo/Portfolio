@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --white-color: #fff;
+  --neutral-color: #28352f;
+  --primary-blue: #172b4d;
+  --primary-green: #36b37e;
+  --secundary-green: #c5e9da;
+  --tertiary-green: #ebf0ee;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting font family and size */
+html {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 62.5%;
+}
+
+/* Setting mobile first styles */
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+header {
+  margin: 1rem 2rem;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+  list-style-type: none;
+}
+
+header nav ul li a {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--neutral-color);
+  text-decoration: none;
+}
+
+header nav .nav__button {
+  margin-right: 1rem;
+}
+
+main {
+  background-image: url(../img/header-illsutration-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  width: 32.7rem;
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.primary {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 5.2rem;
+  text-align: center;
+}
+
+.title h1 {
+  color: var(--primary-blue);
+}
+
+.title h2 {
+  color: var(--primary-green);
+}
+
+.supporting-text {
+  text-align: center;
+  color: var(--neutral-color);
+  width: 85%;
+  margin: 4rem;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+.social-media {
+  display: flex;
+  margin: 4rem;
+}
+
+.social-media ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.social-media a {
+  color: var(--neutral-color);
+  margin-right: 2rem;
+}
+
+.down-button {
+  color: var(--neutral-color);
+}
