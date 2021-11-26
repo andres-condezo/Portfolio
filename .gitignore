@@ -1,6 +1,5 @@
 node_modules
 hint-report/
 package-lock.json
-package.json
 .hintrc
 .stylelintrc.json
