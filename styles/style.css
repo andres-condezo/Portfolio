@@ -123,7 +123,6 @@ main .headline {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 100%;
   margin-left: 6rem;
 }
 
@@ -150,7 +149,7 @@ p {
   line-height: 2.4rem;
 }
 
-span {
+.h2-span {
   font-family: var(--font-sans);
   font-style: normal;
   font-weight: 500;
@@ -179,11 +178,11 @@ span {
 /* works styles */
 
 .works {
-  width: 100%;
+  /* width: 100%; */
   display: grid;
   grid-template-columns: auto;
   grid-row-gap: 10rem;
-  justify-content: start;
+  justify-content: center;
   margin: 18.4rem 0 8rem 3rem;
 }
 
@@ -270,9 +269,24 @@ span {
   line-height: 1.6rem;
   color: var(--primary-color);
   margin: 2rem 0 4rem 0;
+  display: flex;
+  list-style-type: none;
+  margin-top: 1rem;
 }
 
-.works__left-block .works__tags span {
+.about-myself ul li ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.about-myself ul li ul li img {
+  margin-right: 2rem;
+}
+
+.works__left-block .works__tags li {
+  font-style: normal;
   background-color: var(--gray-color);
   margin: 0 0.3rem;
   border-radius: 0.8rem;
@@ -312,7 +326,6 @@ span {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 100%;
   margin-left: 6rem;
   margin-bottom: 8rem;
 }
@@ -358,7 +371,7 @@ span {
   margin-top: 1rem;
 }
 
-.about-myself ul li {
+.about-myself .about-myself__menu ul li {
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -369,15 +382,4 @@ span {
 .about-myself .about-myself__menu ul div {
   font-size: 20px;
   margin-bottom: 4rem;
-}
-
-.about-myself ul li ul li {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-left: 1rem;
-}
-
-.about-myself ul li ul li img {
-  margin-right: 2rem;
 }
