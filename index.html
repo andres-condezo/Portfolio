@@ -7,59 +7,216 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
 			integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
 			crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	<title>My Portfolio</title>
 </head>
 
 <body>
+
 	<header>
 		<nav>
-			<ul>
-				<li class="nav-welcome"><a href="#">welcome</a></li>
+			<ul class="header__ul">
+				<li><a class="header__logo" href="#">Andrés</a></li>
 				<li><a href="#" class="nav__button"><i class="fas fa-bars"></i></a></li>
 			</ul>
 		</nav>
 	</header>
-	
+
 	<main>
 		<section class="headline">
-			<div class="title">
-				<h1 class="primary">
-					Hey there. I’m Andrés 
-				</h1>
-				<h2 class="primary">
-					I’m a software developer
-				</h2>
-			</div>
-			<p class="supporting-text">
-				 I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, 
-don’t hestiate to contact me.
-			</p>
-		</section>
-		<section class="social-media">
+			<h1>I’m Andrés Glad to see you!</h1>
+			<p>I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
+			<span>LET’S CONNECT</span>
+			<section class="headline__social-media">
 				<ul class="social-media__ul">
 					<li>
-						<a href="https://twitter.com/andres_condezo" ><img src="./img/twitter_icon.svg" alt="twitter logo"></a>
+						<a href="https://twitter.com/andres_condezo" rel="noreferrer noopener" target="_blank"><img src="./img/twitter_icon.svg" alt="twitter logo"></a>
 					</li>
 					<li>
-						<a href="https://www.linkedin.com/in/andres-condezo/"  ><img src="./img/linkedin_icon.svg" alt="linkedin logo"></a>
+						<a href="https://www.linkedin.com/in/andres-condezo/" rel="noreferrer noopener" target="_blank" ><img src="./img/linkedin_icon.svg" alt="linkedin logo"></a>
 					</li>
 					<li>
-						<a href="https://ra-condezomonge.medium.com"  ><img src="./img/medium_icon.svg" alt="medium logo"></a>
+						<a href="https://ra-condezomonge.medium.com" rel="noreferrer noopener" target="_blank" ><img src="./img/medium_icon.svg" alt="medium logo"></a>
 					</li>
 					<li>
-						<a href="https://github.com/andres-condezo"  ><img src="./img/github_icon.svg" alt="github logo"></a>
+						<a href="https://github.com/andres-condezo" rel="noreferrer noopener" target="_blank" ><img src="./img/github_icon.svg" alt="github logo"></a>
 					</li>
 					<li>
-						<a href="#" ><img src="./img/angellist_icon.svg"  alt="angelist logo"></a>
+						<a href="#" ><img src="./img/like_icon.svg"  alt="like logo"></a>
 					</li>
 				</ul>
+			</section>
 		</section>
-		<section class="action">
-			<a href="#" class="down-button">
-				<img src="./img/down_icon.png" alt="down botton"/>
-			</a>
+
+		<section class="works">
+
+			<article class="works__card">
+				<figure class="snapshoot"><img src="./img/Snapshoot-Portfolio.png" alt=""></figure>
+				<section class="works__left-block">
+					<div class="works__primary-text">
+						<h3 class="works__project-title">Tonic</h3>
+						<div class="frame-2">
+							<span class="client">CANOPY</span>
+							<div class="counter"></div>
+							<span class="role">Back End Dev</span>
+							<div class="counter"></div>
+							<span class="year">2015</span>
+						</div>
+					</div>
+					<p class="works__primary-par">
+						A daily selection of privately personalized reads; no accounts or sign-ups required.
+					</p>
+					<div class="works__tags">
+						<span>html</span>
+						<span>css</span>
+						<span>javaScript</span>
+					</div>
+					<a href="#works__card2" class="works__action">See Project</a>
+				</section>
+			</article>
+
+			<article class="works__card">
+				<figure class="snapshoot"><img src="./img/Snapshoot-Portfolio2.png" alt=""></figure>
+				<section class="works__left-block">
+					<div class="works__primary-text">
+						<h3 class="works__project-title">Multi-Post Stories</h3>
+						<div class="frame-2">
+							<span class="client">CANOPY</span>
+							<div class="counter"></div>
+							<span class="role">Back End Dev</span>
+							<div class="counter"></div>
+							<span class="year">2015</span>
+						</div>
+					</div>
+					<p class="works__primary-par">
+						A daily selection of privately personalized reads; no accounts or sign-ups required.
+					</p>
+					<div class="works__tags">
+						<span>html</span>
+						<span>css</span>
+						<span>javaScript</span>
+					</div>
+					<a href="#works__card" class="works__action">See Project</a>
+				</section>
+			</article>
+
+			<article class="works__card">
+				<figure class="snapshoot"><img src="./img/Snapshoot-Portfolio3.png" alt=""></figure>
+				<section class="works__left-block">
+					<div class="works__primary-text">
+						<h3 class="works__project-title">Tonic</h3>
+						<div class="frame-2">
+							<span class="client">CANOPY</span>
+							<div class="counter"></div>
+							<span class="role">Back End Dev</span>
+							<div class="counter"></div>
+							<span class="year">2015</span>
+						</div>
+					</div>
+					<p class="works__primary-par">
+						A daily selection of privately personalized reads; no accounts or sign-ups required.
+					</p>
+					<div class="works__tags">
+						<span>html</span>
+						<span>css</span>
+						<span>javaScript</span>
+					</div>
+					<a href="#works__card2" class="works__action">See Project</a>
+				</section>
+			</article>
+
+			<article class="works__card">
+				<figure class="snapshoot"><img src="./img/Snapshoot-Portfolio4.png" alt=""></figure>
+				<section class="works__left-block">
+					<div class="works__primary-text">
+						<h3 class="works__project-title">Multi-Post Stories</h3>
+						<div class="frame-2">
+							<span class="client">CANOPY</span>
+							<div class="counter"></div>
+							<span class="role">Back End Dev</span>
+							<div class="counter"></div>
+							<span class="year">2015</span>
+						</div>
+					</div>
+					<p class="works__primary-par">
+						A daily selection of privately personalized reads; no accounts or sign-ups required.
+					</p>
+					<div class="works__tags">
+						<span>html</span>
+						<span>css</span>
+						<span>javaScript</span>
+					</div>
+					<a href="#works__card" class="works__action">See Project</a>
+				</section>
+			</article>
+
 		</section>
+
+		<section class="about-myself" id="about-myself">
+			<h1 class="about-myself__title">About Myself</h1>
+			<p class="about-myself__primary-par">
+				Hello I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.
+			</p>
+			<span>LET’S CONNECT</span>
+			<section class="headline__social-media">
+				<ul class="social-media__ul">
+					<li>
+						<a href="https://github.com/andres-condezo" rel="noreferrer noopener" target="_blank" ><img src="./img/github_icon.svg" alt="github logo"></a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/andres-condezo/" rel="noreferrer noopener" target="_blank" ><img src="./img/linkedin_icon.svg" alt="linkedin logo"></a>
+					</li>
+					<li>
+						<a href="#" ><img src="./img/like_icon.svg" alt="like logo"></a>
+					</li>
+					<li>
+						<a href="https://twitter.com/andres_condezo" rel="noreferrer noopener" target="_blank"><img src="./img/twitter_icon.svg" alt="twitter logo"></a>
+					</li>
+					<li>
+						<a href="https://ra-condezomonge.medium.com" rel="noreferrer noopener" target="_blank" ><img src="./img/medium_icon.svg" alt="medium logo"></a>
+					</li>
+				</ul>
+				<a href="#about-myself" class="works__resume">See Project</a>
+				<section class="about-myself__menu">
+					<ul class="about-myself__ul">
+						<li>
+							<div>
+								Langguages
+							</div>
+							<ul>
+								<li>
+									<img src="./img/js.png" alt="java script logo">
+									JavaScript
+								</li>
+								<li>
+									<img src="./img/html.png" alt="html logo">
+									HTML
+								</li>
+								<li>
+									<img src="./img/css.png" alt="css logo">
+									CSS
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div>
+								Frameworks
+							</div>
+						</li>
+						<li>
+							<div>
+								Skills
+							</div>
+						</li>
+					</ul>
+				</section>
+			</section>
+
+
+		</section>
+
 	</main>
-	
 </body>
 </html>
