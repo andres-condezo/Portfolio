@@ -383,3 +383,21 @@ p {
   font-size: 20px;
   margin-bottom: 4rem;
 }
+
+.tech-skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills li {
+  list-style-type: none;
+  float: left;
+  margin: 0 1rem;
+  background-color: var(--gray-color);
+  color: var(--secundary-color);
+  min-width: 5rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
