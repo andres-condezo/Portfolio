@@ -144,7 +144,6 @@ p {
   color: var(--neutral-color);
   width: 30rem;
   margin-top: 1.2rem;
-  /* margin-right: 2rem; */
   font-family: var(--font-sans);
   font-style: normal;
   font-weight: normal;
@@ -186,12 +185,11 @@ p {
   grid-template-columns: auto;
   grid-row-gap: 10rem;
   justify-content: center;
-  margin: 18.4rem 0 8rem 0rem;
+  margin: 18.4rem 0 8rem 0;
   background-color: var(--works-color);
 }
 
 .works__card {
-  /* width: 90%; */
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -336,7 +334,6 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  /* margin-left: 2rem; */
   margin-bottom: 8rem;
 }
 
@@ -436,7 +433,7 @@ p {
   width: 100%;
 }
 
-.form ul {
+.form .form-ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -484,8 +481,8 @@ p {
   margin-top: 1rem;
 }
 
-::placeholder { 
-  color: #B3BAC5;
+::placeholder {
+  color: #b3bac5;
   font-family: var(--font-sans);
   font-weight: 400;
   font-size: 1.5rem;
