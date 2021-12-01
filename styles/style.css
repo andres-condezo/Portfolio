@@ -400,7 +400,7 @@ p {
   border-top-left-radius: 80px 80px;
   background-image: url(../img/form_bg_mobile.svg);
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: center right;
 }
 
 .form-title {
@@ -467,9 +467,12 @@ p {
   border-radius: 8px;
   border-style: none;
   padding: 1rem;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 
-.form button {
+.form .contact-button {
   border-radius: 8px;
   border-style: none;
   padding: 1.2rem 2rem;
@@ -479,6 +482,7 @@ p {
   font-family: var(--font-sans);
   font-weight: 500;
   margin-top: 1rem;
+  cursor: pointer;
 }
 
 ::placeholder {
@@ -486,4 +490,21 @@ p {
   font-family: var(--font-sans);
   font-weight: 400;
   font-size: 1.5rem;
+}
+
+.contact-button:hover {
+  color: white;
+  background-color: var(--primary-color);
+  box-shadow: 16px 56px 40px -22px rgba(96, 111, 255, 0.1);
+}
+
+.contact-button:active {
+  color: white;
+  background-color: var(--secundary-color);
+}
+
+.contact-button:disabled,
+.contact-button[disabled] {
+  color: var(--neutral-color);
+  background-color: white;
 }
