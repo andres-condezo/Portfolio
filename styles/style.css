@@ -110,12 +110,17 @@ header .nav__button[disabled] {
   background-color: white;
 }
 
+header .desktop-menu-container {
+  display: none;
+}
+
 main {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content: center;
   background-color: var(--works-color);
 }
 
@@ -348,7 +353,6 @@ p {
   border-top-right-radius: 80px 80px;
   background-color: var(--white-color);
   width: 100%;
-  list-style-type: none;
   padding-left: 3rem;
 }
 
@@ -390,7 +394,7 @@ p {
   width: 80%;
 }
 
-.about-myself .about-myself__menu ul {
+.about-myself .about-myself__menu .about-myself__ul {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -530,4 +534,203 @@ p {
 .contact-button[disabled] {
   color: var(--neutral-color);
   background-color: white;
+}
+
+/* media queries */
+
+/* Medium Devices, Desktops */
+
+@media (min-width: 992px) {
+  header {
+    margin-top: 2rem;
+    background-color: var(--white-color);
+  }
+
+  .header__ul li .header__logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-left: 10rem;
+  }
+
+  nav {
+    background-color: var(--white-color);
+    padding-bottom: 2rem;
+  }
+
+  header .nav__button {
+    display: none;
+  }
+
+  header .desktop-menu-container {
+    display: flex;
+  }
+
+  .desktop-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10rem;
+  }
+
+  .desktop-menu li {
+    list-style-type: none;
+  }
+
+  .desktop-menu li a {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-decoration: none;
+    padding-right: 3rem;
+    color: var(--neutral-color);
+  }
+
+  main .headline {
+    width: 100%;
+    background-image: url(../img/header_bg_2x.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 8rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    padding-bottom: 18rem;
+  }
+
+  h1 {
+    width: 80%;
+    margin-top: 10rem;
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+
+  .headline p {
+    width: 100%;
+    margin-top: 1.2rem;
+    padding-bottom: 2rem;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  .works {
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    margin: 0;
+  }
+
+  .works__card {
+    width: 90rem;
+    height: 39.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 2rem;
+  }
+
+  .card2 {
+    flex-direction: row-reverse;
+  }
+
+  .snapshoot {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 54%;
+    height: 100%;
+  }
+
+  .snapshoot img {
+    width: 42rem;
+  }
+
+  .works__left-block {
+    width: 100%;
+    padding-left: 4rem;
+    padding-top: 2rem;
+  }
+
+  .block2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .works__left-block .works__project-title {
+    font-size: 3rem;
+  }
+
+  .works__left-block .works__primary-par {
+    width: 100%;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+  }
+
+  .about-myself {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 13rem;
+  }
+
+  .about-myself__block {
+    width: 50%;
+    margin-right: 4rem;
+  }
+
+  .about-myself__ul .langguages-ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about-myself__ul .langguages-ul .lang-tags {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 16%;
+  }
+
+  .about-myself__primary-par {
+    width: 100%;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  .form-container {
+    background-image: url(../img/contact-form-bg-d.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  .form-p {
+    width: 50%;
+  }
+
+  .form {
+    width: 50%;
+  }
+
+  .i-button {
+    align-items: center;
+  }
+}
+
+/* Large Devices, Desktops */
+
+@media only screen and (min-width: 1100px) {
+  body {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
