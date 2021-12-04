@@ -38,6 +38,10 @@ body {
   overflow-x: hidden;
 }
 
+.btn {
+  transition: all 0.3s ease-out;
+}
+
 header {
   width: 100%;
 }
@@ -159,6 +163,8 @@ p {
   font-weight: normal;
   font-size: 1.5rem;
   line-height: 2.4rem;
+  animation-duration: 1s;
+  animation-name: slidein;
 }
 
 .h2-span {
@@ -448,6 +454,8 @@ p {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 3rem;
+  animation-duration: 1s;
+  animation-name: slidein;
 }
 
 .form {
@@ -534,6 +542,20 @@ p {
 .contact-button[disabled] {
   color: var(--neutral-color);
   background-color: white;
+}
+
+/* animations */
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 /* media queries */
