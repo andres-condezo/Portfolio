@@ -118,6 +118,15 @@ header .desktop-menu-container {
   display: none;
 }
 
+.mobile-menu-container {
+  background-color: var(--secondary-color);
+}
+
+.mobile-menu-ul {
+  color: red;
+}
+
+
 main {
   width: 100%;
   display: flex;
