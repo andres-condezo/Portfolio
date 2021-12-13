@@ -119,13 +119,28 @@ header .desktop-menu-container {
 }
 
 .mobile-menu-container {
-  background-color: var(--secondary-color);
+  position: absolute;
+  background-color: #6070FF;
+  display: none;
+  width: 100;
+  height: 100;
 }
 
-.mobile-menu-ul {
-  color: red;
+.mobile-menu-ul li {
+  list-style: none;
 }
 
+.mobile-menu-ul a {
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 30px;
+}
+
+.visible {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 
 main {
   width: 100%;
