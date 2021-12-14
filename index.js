@@ -1,17 +1,25 @@
-const menu = document.querySelector('#menu-container');
-const closeButton = document.querySelector('.close-button');
-const hamburguer = document.querySelector('#hamburguer-button');
-const body = document.querySelector('body');
-const headline = document.querySelector('#headline');
+function main() {
+  const menu = document.querySelector('#menu-container');
+  const closeButton = document.querySelector('.close-button');
+  const hamburguer = document.querySelector('#hamburguer-button');
+  const body = document.querySelector('body');
+  const anchors = document.querySelectorAll('.mobile-menu-ul li');
 
-hamburguer.addEventListener('click', () => {
-  menu.classList.add('visible');
-  body.classList.add('overflow-hidden');
-  headline.classList.add('blurry');
-});
+  function openMenu() {
+    menu.classList.add('visible');
+    body.classList.add('overflow-hidden');
+  }
 
-closeButton.addEventListener('click', () => {
-  menu.classList.remove('visible');
-  body.classList.remove('overflow-hidden');
-  headline.classList.remove('blurry');
-});
+  function closeMenu() {
+    menu.classList.remove('visible');
+    body.classList.remove('overflow-hidden');
+  }
+
+  hamburguer.addEventListener('click', openMenu);
+  closeButton.addEventListener('click', closeMenu);
+  anchors.forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+}
+
+main();
