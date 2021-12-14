@@ -155,12 +155,12 @@ header .desktop-menu-container {
   align-content: flex-end;
   margin-right: 1rem;
   margin-top: 3rem;
-  margin-left: 8rem;
+  margin-left: 12rem;
 }
 
 .mobile-menu-ul {
   margin-top: 8rem;
-  margin-left: 2rem;
+  margin-left: 4rem;
 }
 
 .mobile-menu-ul li {
