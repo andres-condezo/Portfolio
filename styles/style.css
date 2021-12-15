@@ -274,7 +274,7 @@ p {
 .works__card {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 2rem 2rem 4rem 2rem;
   flex-direction: column;
   background: #fff;
@@ -622,6 +622,69 @@ p {
   }
 }
 
+
+/* modal section */
+
+.modal-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  inset: 0 0 0 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.show-modal {
+  display: flex;
+}
+
+.modal-card {
+  background-color: #fff;
+  width: 80%;
+  height: 80%;
+  padding: 2rem;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.close-button-2 {
+  float: right;
+  padding: 0.5rem;
+  color: grey;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.modal__project-title {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 44px;
+  color: var(--neutral-color);
+}
+
+.snapshoot-modal {
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 54%;
+  height: 100%;
+}
+
+.snapshoot-modal img {
+  width: 24rem;
+}
+
 /* media queries */
 
 /* Medium Devices, Desktops */
@@ -757,6 +820,7 @@ p {
     width: 100%;
     font-size: 1.3rem;
     line-height: 2.2rem;
+    padding-right: 2rem;
   }
 
   .about-myself {
