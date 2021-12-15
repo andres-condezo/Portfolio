@@ -201,3 +201,68 @@ for (let j = 0; j < myModalProjects.length; j += 1) {
 
 { /* const myDiv = document.createElement('LI'); */ }
 { /* modalSection.appendChild(myDiv); */ }
+
+const ProjectPopUp = (event) => {
+  const cardTitle = event.target.parentNode.children[0].innerHTML;
+  let objItem;
+ // console.log(cardPopUp[2].name === cardTitle )
+  for(let i = 0; i<cardPopUp.length; i += 1){
+      if(cardPopUp[i].name === cardTitle){
+        objItem = cardPopUp[i];
+      }
+  }
+
+const container = document.createElement('article');
+container.className = 'card-pop card flex flex-column bg';
+container.setAttribute('id', 'card-popUp');
+
+container.innerHTML = `
+    <img id="exit-popUp" class="exit-card" src="images/exit2.svg" alt="exit">
+  <h3 class="heading bold cap">${objItem.name}</h3>
+  <ul class="info flex">
+    <li class="category flex cross-center ellipse line-height highlight uppe">CANOPY</li>
+    <li class="category flex cross-center ellipse line-height highlight uppe">Back End Dev</li>
+    <li class="category flex cross-center ellipse line-height highlight uppe">2015</li>
+  </ul>
+      <img class="pro-img" src="${objItem.img}" alt="project photo">
+      <div class="content-pop">
+        <p>
+        ${objItem.description}
+        </p>
+        <div class="lang-btn">
+        <ul class="tags flex">
+          <li class="line-height round-borders">${objItem.technologies[0]}</li>
+          <li class="line-height round-borders">${objItem.technologies[1]}</li>
+          <li class="line-height round-borders">${objItem.technologies[2]}</li>
+        </ul>
+        <div class="btn2">
+          <button class="b1 bg round-borders cap " type="button">see live <img src="images/arrowCir.svg" alt="goto"></button>
+          <button class="b2 bg round-borders cap " type="button">see Source <img src="images/cat.svg" alt="sourceCode"></button>
+        </div>
+        </div>
+        </div> `;
+        const works2 = document.querySelector('#container-pop')
+        const cardPop = document.querySelector('.container-Pop');
+        const body = document.querySelector('body');
+        works2.appendChild(container);
+        const exit = document.querySelector('#exit-popUp');
+          cardPop.classList.add('show');
+         body.classList.add('overflow-hidden');
+         
+         exit.addEventListener('click', () => {
+          cardPop.classList.remove('show');
+          body.classList.remove('overflow-hidden');
+          works2.innerHTML="";
+        });
+        
+
+
+};
+
+
+const btn = document.querySelectorAll('.btn');
+
+btn.forEach((link) => {
+link.addEventListener('click', ProjectPopUp);
+});
+
