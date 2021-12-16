@@ -197,3 +197,19 @@ function myFunction() {
 }
 
 window.onscroll = function () { myFunction(); };
+
+// form validation
+
+const form = document.querySelector('#form');
+const email = document.querySelector('#email');
+const emailInput = email.value;
+const msg = document.querySelector('#errorMsg');
+const regex = /[a-z]/;
+
+form.addEventListener('submit', (event) => {
+  if (!regex.test(emailInput)) {
+      event.preventDefault();
+      msg.textContent = '*The content of the email field has to be in lower case.';
+  }
+});
+
