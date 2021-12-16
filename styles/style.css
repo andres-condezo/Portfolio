@@ -227,8 +227,6 @@ p {
   font-weight: normal;
   font-size: 1.5rem;
   line-height: 2.4rem;
-  animation-duration: 1s;
-  animation-name: slidein;
 }
 
 .h2-span {
@@ -622,7 +620,6 @@ p {
   }
 }
 
-
 /* modal section */
 
 .modal-container {
@@ -645,17 +642,18 @@ p {
 .modal-card {
   background-color: #fff;
   width: 80%;
-  height: 80%;
+  height: 90%;
+  overflow: auto;
   padding: 2rem;
 }
 
 .close-button-2 {
   float: right;
   padding: 0.5rem;
-  color: grey;
+  color: #67798e;
   background: none;
   border: none;
-  font-size: 3rem;
+  font-size: 2rem;
   cursor: pointer;
   outline: inherit;
 }
@@ -667,19 +665,45 @@ p {
   font-size: 3rem;
   line-height: 44px;
   color: var(--neutral-color);
+  margin-bottom: 1rem;
 }
 
 .snapshoot-modal {
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  width: 54%;
+  width: 100%;
   height: 100%;
 }
 
 .snapshoot-modal img {
-  width: 24rem;
+  width: 100%;
+}
+
+.modal__primary-par {
+  font-family: var(--font-sans);
+  width: 28rem;
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: var(--neutral-color);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-btn {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-icon {
+  margin-left: 4px;
 }
 
 /* media queries */
@@ -871,6 +895,31 @@ p {
   .i-button {
     align-items: center;
   }
+
+  .modal__description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .modal__primary-par {
+    width: 64%;
+  }
+
+  .block-r {
+    width: 36%;
+  }
+
+  .modal__description .block-r .modal__tags {
+    margin-bottom: 2rem;
+  }
+
+  .modal-buttons {
+    justify-content: left
+  }
+
 }
 
 /* Large Devices, Desktops */
@@ -887,5 +936,14 @@ p {
 
   .about-myself {
     padding-left: 10rem;
+  }
+
+  .modal__primary-par {
+    width: 74%;
+    margin-right: 4rem;
+  }
+
+  .block-r {
+    width: 26%;
   }
 }
