@@ -673,7 +673,7 @@ p {
   height: 100%;
 }
 
-.snapshoot-modal img {
+.snapshoot-modal .img-modal {
   width: 100%;
 }
 
@@ -917,9 +917,8 @@ p {
   }
 
   .modal-buttons {
-    justify-content: left
+    justify-content: left;
   }
-
 }
 
 /* Large Devices, Desktops */
