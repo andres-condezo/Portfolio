@@ -208,8 +208,8 @@ const regex = /[a-z]/;
 
 form.addEventListener('submit', (event) => {
   if (!regex.test(emailInput)) {
-      event.preventDefault();
-      msg.textContent = '*The content of the email field has to be in lower case.';
+    event.preventDefault();
+    msg.classList.add('showError');
+    msg.textContent = '*The content of the email field has to be in lower case.';
   }
 });
-
