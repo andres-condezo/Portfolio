@@ -48,6 +48,15 @@ body {
 
 header {
   width: 100%;
+  position: sticky;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
 }
 
 header nav .header__ul {
@@ -57,7 +66,8 @@ header nav .header__ul {
   align-items: center;
   height: 44px;
   background-color: white;
-  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   list-style-type: none;
 }
 
@@ -227,8 +237,6 @@ p {
   font-weight: normal;
   font-size: 1.5rem;
   line-height: 2.4rem;
-  animation-duration: 1s;
-  animation-name: slidein;
 }
 
 .h2-span {
@@ -274,7 +282,7 @@ p {
 .works__card {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 2rem 2rem 4rem 2rem;
   flex-direction: column;
   background: #fff;
@@ -622,13 +630,99 @@ p {
   }
 }
 
+/* modal section */
+
+.modal-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  inset: 0 0 0 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.show-modal {
+  display: flex;
+}
+
+.modal-card {
+  background-color: #fff;
+  width: 80%;
+  height: 90%;
+  overflow: auto;
+  padding: 2rem;
+}
+
+.close-button-2 {
+  float: right;
+  padding: 0.5rem;
+  color: #67798e;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.modal__project-title {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 44px;
+  color: var(--neutral-color);
+  margin-bottom: 1rem;
+}
+
+.snapshoot-modal {
+  width: 100%;
+  height: 100%;
+}
+
+.snapshoot-modal .img-modal {
+  width: 100%;
+}
+
+.modal__primary-par {
+  font-family: var(--font-sans);
+  width: 28rem;
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: var(--neutral-color);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-btn {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-icon {
+  margin-left: 4px;
+}
+
 /* media queries */
 
 /* Medium Devices, Desktops */
 
 @media (min-width: 992px) {
   header {
-    margin-top: 2rem;
+    padding-top: 2rem;
     background-color: var(--white-color);
   }
 
@@ -673,7 +767,8 @@ p {
   }
 
   main .headline {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     background-image: url(../img/header_bg_2x.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -757,6 +852,7 @@ p {
     width: 100%;
     font-size: 1.3rem;
     line-height: 2.2rem;
+    padding-right: 2rem;
   }
 
   .about-myself {
@@ -810,13 +906,36 @@ p {
   .i-button {
     align-items: center;
   }
+
+  .modal__description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .modal__primary-par {
+    width: 64%;
+  }
+
+  .block-r {
+    width: 36%;
+  }
+
+  .modal__description .block-r .modal__tags {
+    margin-bottom: 2rem;
+  }
+
+  .modal-buttons {
+    justify-content: left;
+  }
 }
 
 /* Large Devices, Desktops */
 
 @media only screen and (min-width: 1100px) {
   body {
-    width: 50%;
     margin: 0 auto;
   }
 
@@ -826,5 +945,14 @@ p {
 
   .about-myself {
     padding-left: 10rem;
+  }
+
+  .modal__primary-par {
+    width: 74%;
+    margin-right: 4rem;
+  }
+
+  .block-r {
+    width: 26%;
   }
 }

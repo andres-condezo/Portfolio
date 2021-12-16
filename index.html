@@ -34,7 +34,7 @@
 		</ul>
 	</div>
 	</section>
-	<header>
+	<header id="header">
 		<nav>
 			<ul class="header__ul">
 				<li><a class="header__logo" href="#">Andrés</a></li>
@@ -91,119 +91,8 @@
 				</ul>
 			</section>
 		</section>
-		<section class="works" id="works">
 
-			<article class="works__card">
-				<figure class="snapshoot">
-					<img src="./img/Snapshoot-Portfolio.png" alt="">
-				</figure>
-				<section class="works__left-block">
-					<div class="works__primary-text">
-						<h3 class="works__project-title">Tonic</h3>
-						<div class="frame-2">
-							<span class="client">CANOPY</span>
-							<div class="counter"></div>
-							<span class="role">Back End Dev</span>
-							<div class="counter"></div>
-							<span class="year">2015</span>
-						</div>
-					</div>
-					<p class="works__primary-par">
-						A daily selection of privately personalized reads; no accounts or sign-ups required.
-					</p>
-					<ul class="works__tags">
-						<li>html</li>
-						<li>css</li>
-						<li>javaScript</li>
-					</ul>
-					<a href="#works__card2" class="btn works__action">See Project</a>
-				</section>
-			</article>
-
-			<article class="works__card card2">
-				<figure class="snapshoot">
-					<img src="./img/Snapshoot-Portfolio2.png" alt="">
-				</figure>
-				<section class="works__left-block block2">
-					<div class="works__primary-text">
-						<h3 class="works__project-title">Multi-Post Stories</h3>
-						<div class="frame-2">
-							<span class="client">FACEBOOK</span>
-							<div class="counter"></div>
-							<span class="role">Full Stack Dev</span>
-							<div class="counter"></div>
-							<span class="year">2015</span>
-						</div>
-					</div>
-					<p class="works__primary-par">
-						Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.
-					</p>
-					<ul class="works__tags">
-						<li>html</li>
-						<li>Ruby on rails</li>
-						<li>css</li>
-						<li>javaScript</li>
-					</ul>
-					<a href="#works__card" class="btn works__action">See Project</a>
-				</section>
-			</article>
-
-			<article class="works__card">
-				<figure class="snapshoot">
-					<img src="./img/Snapshoot-Portfolio3.png" alt="">
-				</figure>
-				<section class="works__left-block">
-					<div class="works__primary-text">
-						<h3 class="works__project-title">Facebook 360</h3>
-						<div class="frame-2">
-							<span class="client">FACEBOOK</span>
-							<div class="counter"></div>
-							<span class="role">Full Stack Dev</span>
-							<div class="counter"></div>
-							<span class="year">2015</span>
-						</div>
-					</div>
-					<p class="works__primary-par">
-						Exploring the future of media in Facebook's first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.
-					</p>
-					<ul class="works__tags">
-						<li>html</li>
-						<li>Ruby on rails</li>
-						<li>css</li>
-						<li>javaScript</li>
-					</ul>
-					<a href="#works__card2" class="btn works__action">See Project</a>
-				</section>
-			</article>
-
-			<article class="works__card card2">
-				<figure class="snapshoot">
-					<img src="./img/Snapshoot-Portfolio4.png" alt="">
-				</figure>
-				<section class="works__left-block block2">
-					<div class="works__primary-text">
-						<h3 class="works__project-title">Uber Navigation</h3>
-						<div class="frame-2">
-							<span class="client">UBER</span>
-							<div class="counter"></div>
-							<span class="role">Lead Developer</span>
-							<div class="counter"></div>
-							<span class="year">2018</span>
-						</div>
-					</div>
-					<p class="works__primary-par">
-						A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.
-					</p>
-					<ul class="works__tags">
-						<li>html</li>
-						<li>css</li>
-						<li>javaScript</li>
-					</ul>
-					<a href="#works__card" class="btn works__action">See Project</a>
-				</section>
-			</article>
-
-		</section>
+		<section class="works" id="works"></section>
 
 		<section class="about-myself" id="about-myself">
 			<section class="about-myself__block">
@@ -297,6 +186,7 @@
 			</form>
 		</section>
 
+		<section class="modal-container" id="modal-container" onclick="closeModal()"></section>
 </main>
 
 <script src="./index.js"></script>
