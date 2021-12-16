@@ -197,3 +197,22 @@ function myFunction() {
 }
 
 window.onscroll = function () { myFunction(); };
+
+// form validation
+
+const form = document.querySelector('#form');
+const email = document.querySelector('#email');
+const msg = document.querySelector('#errorMsg');
+const regex = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)*$/;
+
+form.addEventListener('submit', (event) => {
+  const emailInput = email.value;
+  if (!regex.test(emailInput)) {
+    event.preventDefault();
+    msg.classList.add('showError');
+    msg.textContent = '*The content of the email field has to be in lower case.';
+  } else {
+    msg.classList.remove('showError');
+    msg.innerHTML = '';
+  }
+});

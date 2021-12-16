@@ -168,17 +168,19 @@
 				class="form"
 				action="https://formspree.io/f/moqrapvz"
 				method="POST"
+				id="form"
 			>
 				<ul class="form-ul">
 					<li class="input">
 						<input type="text" placeholder="username" name="user_name" maxlength="30" required>
 					</li>
 					<li class="input">
-						<input type="email" placeholder="email" name="email" required>
+						<input id="email" type="email" placeholder="email" name="email">
 					</li>
 					<li class="input">
 						<textarea name="message" placeholder="Write your message here" rows="6" maxlength="500" required></textarea>
 					</li>
+					<li id="errorMsg" class="errorMsg"></li>
 					<li class="input i-button">
 						<button type="submit" class="btn contact-button">Get in Touch</button>
 					</li>
