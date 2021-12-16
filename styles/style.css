@@ -616,6 +616,19 @@ p {
   background-color: white;
 }
 
+.errorMsg {
+  color: #f00;
+  background-color: #fff;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  padding: 2rem;
+  display: none;
+}
+
+.showError {
+  display: block;
+}
+
 /* animations */
 
 @keyframes slidein {
