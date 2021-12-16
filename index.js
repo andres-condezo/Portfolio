@@ -28,7 +28,7 @@ anchors.forEach((link) => {
 // works-section
 // ***************
 
-const data = [
+const projects = [
   {
     name: 'Tonic',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
@@ -70,7 +70,7 @@ const data = [
 function createCard(el) {
   return `
 <figure class="snapshoot">
-  <img src="${el.image}" alt="">
+  <img src="${el.image}" alt="${el.name} project image">
 </figure>
 <section class="works__left-block">
   <div class="works__primary-text">
@@ -94,7 +94,7 @@ function createCard(el) {
 `;
 }
 
-const myProjects = data.map((el, index) => {
+const myProjects = projects.map((el, index) => {
   const article = document.createElement('article');
   article.className = 'works__card';
   if (index % 2 === 1) {
@@ -129,7 +129,7 @@ function createModal(el) {
         </div>
       </div>
       <figure class="snapshoot-modal">
-        <img class="img-modal" src="${el.image}" alt="">
+        <img class="img-modal" src="${el.image}" alt="${el.name} project image">
       </figure>
       <div class="modal__description">
         <p class="modal__primary-par">${el.descriptionPopup}</p>
@@ -142,11 +142,11 @@ function createModal(el) {
           <div class="modal-buttons">
             <a href="${el.liveVersion}" class="btn works__action modal-btn">
               See Live
-              <img class="modal-icon" src="./img/live-Icon.png" alt=""/>
+              <img class="modal-icon" src="./img/live-Icon.png" alt="live demo icon"/>
             </a>
             <a href="${el.source}" class="btn works__action modal-btn">
               See Source
-              <img class="modal-icon git-modal" src="./img/github_icon_blue.svg" alt=""/>
+              <img class="modal-icon git-modal" src="./img/github_icon_blue.svg" alt="github icon"/>
             </a>
           </div>
         </div>
@@ -174,9 +174,26 @@ modalBtn.forEach((el, index) => {
     openModal();
     const modalArticle = document.createElement('article');
     modalArticle.className = 'modal-card';
-    modalArticle.innerHTML = createModal(data[index]);
+    modalArticle.innerHTML = createModal(projects[index]);
     modalSection.appendChild(modalArticle);
     const closeModalBtn = document.querySelector('#close-button-2');
     closeModalBtn.addEventListener('click', closeModal);
   });
 });
+
+//* **************
+// sticky menu
+//* **************
+
+const header = document.getElementById('header');
+const sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+}
+
+window.onscroll = function () { myFunction(); };
