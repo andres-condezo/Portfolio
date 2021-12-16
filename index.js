@@ -8,12 +8,12 @@ const hamburguer = document.querySelector('#hamburguer-button');
 const body = document.querySelector('body');
 const anchors = document.querySelectorAll('.mobile-menu-ul li');
 
-function openMenu () {
+function openMenu() {
   menu.classList.add('visible');
   body.classList.add('overflow-hidden');
 }
 
-function closeMenu () {
+function closeMenu() {
   menu.classList.remove('visible');
   body.classList.remove('overflow-hidden');
 }
@@ -36,7 +36,7 @@ const data = [
     image: './img/Snapshoot-Portfolio1.png',
     technologies: ['html', 'css', 'javaScript'],
     liveVersion: '#',
-    source: '#'
+    source: '#',
   },
   {
     name: 'Multi-Post Stories',
@@ -45,7 +45,7 @@ const data = [
     image: './img/Snapshoot-Portfolio2.png',
     technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
     liveVersion: '#',
-    source: '#'
+    source: '#',
   },
   {
     name: 'Facebook 360',
@@ -54,7 +54,7 @@ const data = [
     image: './img/Snapshoot-Portfolio3.png',
     technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
     liveVersion: '#',
-    source: '#'
+    source: '#',
   },
   {
     name: 'Uber Navigation',
@@ -63,34 +63,34 @@ const data = [
     image: './img/Snapshoot-Portfolio4.png',
     technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
     liveVersion: '#',
-    source: '#'
-  }
+    source: '#',
+  },
 ];
 
-function createCard (el) {
+function createCard(el) {
   return `
-				<figure class="snapshoot">
-					<img src="${el.image}" alt="">
-				</figure>
-				<section class="works__left-block">
-					<div class="works__primary-text">
-						<h3 class="works__project-title">${el.name}</h3>
-						<div class="frame-2">
-							<span class="client">CANOPY</span>
-							<div class="counter"></div>
-							<span class="role">Back End Dev</span>
-							<div class="counter"></div>
-							<span class="year">2015</span>
-						</div>
-					</div>
-					<p class="works__primary-par">${el.description}</p>
-					<ul class="works__tags">
-						<li>${el.technologies[0]}</li>
-						<li>${el.technologies[1]}</li>
-						<li>${el.technologies[2]}</li>
-					</ul>
-					<a href="#works__card2" class="btn works__action" id="showModal">See Project</a>
-				</section>
+<figure class="snapshoot">
+  <img src="${el.image}" alt="">
+</figure>
+<section class="works__left-block">
+  <div class="works__primary-text">
+    <h3 class="works__project-title">${el.name}</h3>
+    <div class="frame-2">
+      <span class="client">CANOPY</span>
+      <div class="counter"></div>
+      <span class="role">Back End Dev</span>
+      <div class="counter"></div>
+      <span class="year">2015</span>
+    </div>
+  </div>
+  <p class="works__primary-par">${el.description}</p>
+  <ul class="works__tags">
+    <li>${el.technologies[0]}</li>
+    <li>${el.technologies[1]}</li>
+    <li>${el.technologies[2]}</li>
+  </ul>
+  <a href="#works__card2" class="btn works__action" id="showModal">See Project</a>
+</section>
 `;
 }
 
@@ -114,7 +114,7 @@ for (let i = 0; i < myProjects.length; i += 1) {
 // modal section
 // ***************
 
-function createModal (el) {
+function createModal(el) {
   return `
     <button class="close-button-2" id="close-button-2">x</button>
     <section class="works__left-block modal__left-block">
@@ -158,13 +158,12 @@ function createModal (el) {
 const modalBtn = document.querySelectorAll('#showModal');
 const modalSection = document.getElementById('modal-container');
 
-function openModal () {
+function openModal() {
   modalSection.classList.add('show-modal');
   body.classList.add('overflow-hidden');
 }
 
-function closeModal () {
-  console.log('click close button');
+function closeModal() {
   modalSection.classList.remove('show-modal');
   body.classList.remove('overflow-hidden');
   modalSection.innerHTML = '';
