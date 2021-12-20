@@ -8,12 +8,12 @@ const hamburguer = document.querySelector('#hamburguer-button');
 const body = document.querySelector('body');
 const anchors = document.querySelectorAll('.mobile-menu-ul li');
 
-function openMenu () {
+function openMenu() {
   menu.classList.add('visible');
   body.classList.add('overflow-hidden');
 }
 
-function closeMenu () {
+function closeMenu() {
   menu.classList.remove('visible');
   body.classList.remove('overflow-hidden');
 }
@@ -31,7 +31,7 @@ anchors.forEach((link) => {
 const header = document.getElementById('header');
 const sticky = header.offsetTop;
 
-function stickMenu () {
+function stickMenu() {
   if (window.pageYOffset > sticky) {
     header.classList.add('sticky');
   } else {
@@ -45,48 +45,48 @@ window.onscroll = () => { stickMenu(); };
 // works-section
 // ***************
 
-const projects = [
+const dataProjects = [
   {
     name: 'Tonic',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/Snapshoot-Portfolio1.png',
+    image: './img/snapshot-Portfolio1.png',
     technologies: ['html', 'css', 'javaScript'],
     liveVersion: '#',
-    source: '#'
+    source: '#',
   },
   {
     name: 'Multi-Post Stories',
     description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
     descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/Snapshoot-Portfolio2.png',
+    image: './img/snapshot-Portfolio2.png',
     technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
     liveVersion: '#',
-    source: '#'
+    source: '#',
   },
   {
     name: 'Facebook 360',
     description: 'Exploring the future of media in Facebook first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.',
     descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/Snapshoot-Portfolio3.png',
+    image: './img/snapshot-Portfolio3.png',
     technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
     liveVersion: '#',
-    source: '#'
+    source: '#',
   },
   {
     name: 'Uber Navigation',
     description: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
     descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/Snapshoot-Portfolio4.png',
+    image: './img/snapshot-Portfolio4.png',
     technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
     liveVersion: '#',
-    source: '#'
-  }
+    source: '#',
+  },
 ];
 
-function createCard (el) {
+function createCard(el) {
   return `
-<figure class="snapshoot">
+<figure class="snapshot">
   <img src="${el.image}" alt="${el.name} project image">
 </figure>
 <section class="works__left-block">
@@ -111,7 +111,7 @@ function createCard (el) {
 `;
 }
 
-const myProjects = projects.map((el, index) => {
+const myProjects = dataProjects.map((el, index) => {
   const article = document.createElement('article');
   article.className = 'works__card';
   if (index % 2 === 1) {
@@ -131,7 +131,7 @@ for (let i = 0; i < myProjects.length; i += 1) {
 // modal section
 // ***************
 
-function createModal (el) {
+function createModal(el) {
   return `
     <button class="close-button-2" id="close-button-2">x</button>
     <section class="works__left-block modal__left-block">
@@ -145,7 +145,7 @@ function createModal (el) {
           <span class="year">2015</span>
         </div>
       </div>
-      <figure class="snapshoot-modal">
+      <figure class="snapshot-modal">
         <img class="img-modal" src="${el.image}" alt="${el.name} project image">
       </figure>
       <div class="modal__description">
@@ -175,12 +175,12 @@ function createModal (el) {
 const modalBtn = document.querySelectorAll('#showModal');
 const modalSection = document.getElementById('modal-container');
 
-function openModal () {
+function openModal() {
   modalSection.classList.add('show-modal');
   body.classList.add('overflow-hidden');
 }
 
-function closeModal () {
+function closeModal() {
   modalSection.classList.remove('show-modal');
   body.classList.remove('overflow-hidden');
   modalSection.innerHTML = '';
@@ -191,7 +191,7 @@ modalBtn.forEach((el, index) => {
     openModal();
     const modalArticle = document.createElement('article');
     modalArticle.className = 'modal-card';
-    modalArticle.innerHTML = createModal(projects[index]);
+    modalArticle.innerHTML = createModal(dataProjects[index]);
     modalSection.appendChild(modalArticle);
     const closeModalBtn = document.querySelector('#close-button-2');
     closeModalBtn.addEventListener('click', closeModal);
