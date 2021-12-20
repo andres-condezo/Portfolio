@@ -5,7 +5,8 @@
 const form = document.querySelector('#form');
 const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
-const msgInput = document.querySelector('#errorMsg');
+const msgInput = document.querySelector('#msg');
+const errorMsgContainer = document.querySelector('#errorMsg');
 const errorMsg = '* The content of the email field has to be in lower case.';
 const regex = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)*$/;
 
@@ -13,24 +14,24 @@ const regex = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9]
 // form validation
 //* **************
 
-function isValidEmail (emailValue) {
+function isValidEmail(emailValue) {
   return regex.test(emailValue);
 }
 
-function showError () {
-  msg.classList.add('showError');
-  msg.textContent = errorMsg;
+function showError() {
+  errorMsgContainer.classList.add('showError');
+  errorMsgContainer.textContent = errorMsg;
 }
 
-function deleteErrorMessage () {
-  msg.classList.remove('showError');
-  msg.innerHTML = '';
+function deleteErrorMessage() {
+  errorMsgContainer.classList.remove('showError');
+  errorMsgContainer.innerHTML = '';
 }
 
 form.addEventListener('submit', (event) => {
-  const emailValue = email.value;
+  const emailValue = emailInput.value;
 
-  if (!isvalid(emailValue)) {
+  if (!isValidEmail(emailValue)) {
     event.preventDefault();
     showError();
   } else {
@@ -46,7 +47,7 @@ const saveData = () => {
   const formData = {
     name: nameInput.value,
     email: emailInput.value,
-    msg: msgInput.value
+    msg: msgInput.value,
   };
   localStorage.setItem('formData', JSON.stringify(formData));
 };
