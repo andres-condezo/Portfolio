@@ -43,6 +43,17 @@ $ git clone https://github.com/andres-condezo/Portfolio.git
 - Twitter: [@andres_condezo](https://twitter.com/andres_condezo)
 - LinkedIn: [andres-condezo](https://linkedin.com/in/andres-condezo)
 
+## Contributors
+
+👤 **Oyelakin**
+
+- GitHub: [@Oyelakin](https://github.com/oyelaking9)
+
+👤 **Reem janina**
+
+- GitHub: [@Reem](https://github.com/Reem-lab)
+
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
