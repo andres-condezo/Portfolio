@@ -106,7 +106,7 @@ function createCard(el) {
     <li>${el.technologies[1]}</li>
     <li>${el.technologies[2]}</li>
   </ul>
-  <a href="#works__card2" class="btn works__action" id="showModal">See Project</a>
+  <a href="#works__card2" class="btn-transition works__action" id="showModal">See Project</a>
 </section>
 `;
 }
@@ -157,11 +157,11 @@ function createModal(el) {
             <li>${el.technologies[2]}</li>
           </ul>
           <div class="modal-buttons">
-            <a href="${el.liveVersion}" class="btn works__action modal-btn">
+            <a href="${el.liveVersion}" class="btn-transition works__action modal-btn">
               See Live
               <img class="modal-icon" src="./img/live-Icon.png" alt="live demo icon"/>
             </a>
-            <a href="${el.source}" class="btn works__action modal-btn">
+            <a href="${el.source}" class="btn-transition works__action modal-btn">
               See Source
               <img class="modal-icon git-modal" src="./img/github_icon_blue.svg" alt="github icon"/>
             </a>
