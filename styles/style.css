@@ -4,7 +4,7 @@
 :root {
   --neutral-color: #172b4d;
   --primary-color: #7f8cff;
-  --secundary-color: #2230d2;
+  --secondary-color: #2230d2;
   --grey-color: #7a869a;
   --gray-color: #ebebff;
   --works-color: #f7f7f9;
@@ -42,7 +42,7 @@ body {
   overflow: hidden;
 }
 
-.btn {
+.btn-transition {
   transition: all 0.3s ease-out;
 }
 
@@ -86,7 +86,7 @@ header nav ul li .header__logo:hover {
 
 header nav ul li .header__logo:active {
   color: white;
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
 }
 
 header nav ul li .header__logo:disabled,
@@ -119,7 +119,7 @@ header .nav__button:hover {
 
 header .nav__button:active {
   color: white;
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
 }
 
 header .nav__button:disabled,
@@ -143,8 +143,8 @@ header .desktop-menu-container {
 }
 
 .mobile-menu-container {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  inset: 0;
   background: rgba(96, 112, 2550, 0.8);
   display: none;
   width: 100%;
@@ -290,13 +290,13 @@ p {
   border-radius: 16px;
 }
 
-.snapshoot {
+.snapshot {
   display: flex;
   justify-content: flex-end;
   width: 100%;
 }
 
-.snapshoot img {
+.snapshot img {
   width: 29.5rem;
 }
 
@@ -413,7 +413,7 @@ p {
 
 .works__action:active {
   color: white;
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
 }
 
 .works__action:disabled,
@@ -459,7 +459,7 @@ p {
 
 .works__resume:active {
   color: white;
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
 }
 
 .works__resume:disabled,
@@ -607,7 +607,7 @@ p {
 
 .contact-button:active {
   color: white;
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
 }
 
 .contact-button:disabled,
@@ -650,12 +650,12 @@ p {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
   inset: 0 0 0 0;
   display: none;
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
+  z-index: 1000;
 }
 
 .show-modal {
@@ -691,12 +691,12 @@ p {
   margin-bottom: 1rem;
 }
 
-.snapshoot-modal {
+.snapshot-modal {
   width: 100%;
   height: 100%;
 }
 
-.snapshoot-modal .img-modal {
+.snapshot-modal .img-modal {
   width: 100%;
 }
 
@@ -833,7 +833,7 @@ p {
     flex-direction: row-reverse;
   }
 
-  .snapshoot {
+  .snapshot {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -842,7 +842,7 @@ p {
     height: 100%;
   }
 
-  .snapshoot img {
+  .snapshot img {
     width: 42rem;
   }
 

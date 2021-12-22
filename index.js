@@ -24,16 +24,33 @@ anchors.forEach((link) => {
   link.addEventListener('click', closeMenu);
 });
 
+//* **************
+// sticky menu
+//* **************
+
+const header = document.getElementById('header');
+const sticky = header.offsetTop;
+
+function stickMenu() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+}
+
+window.onscroll = () => { stickMenu(); };
+
 // ***************
 // works-section
 // ***************
 
-const projects = [
+const dataProjects = [
   {
     name: 'Tonic',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/Snapshoot-Portfolio1.png',
+    image: './img/snapshot-Portfolio1.png',
     technologies: ['html', 'css', 'javaScript'],
     liveVersion: '#',
     source: '#',
@@ -42,7 +59,7 @@ const projects = [
     name: 'Multi-Post Stories',
     description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
     descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/Snapshoot-Portfolio2.png',
+    image: './img/snapshot-Portfolio2.png',
     technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
     liveVersion: '#',
     source: '#',
@@ -51,7 +68,7 @@ const projects = [
     name: 'Facebook 360',
     description: 'Exploring the future of media in Facebook first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.',
     descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/Snapshoot-Portfolio3.png',
+    image: './img/snapshot-Portfolio3.png',
     technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
     liveVersion: '#',
     source: '#',
@@ -60,7 +77,7 @@ const projects = [
     name: 'Uber Navigation',
     description: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
     descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/Snapshoot-Portfolio4.png',
+    image: './img/snapshot-Portfolio4.png',
     technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
     liveVersion: '#',
     source: '#',
@@ -69,7 +86,7 @@ const projects = [
 
 function createCard(el) {
   return `
-<figure class="snapshoot">
+<figure class="snapshot">
   <img src="${el.image}" alt="${el.name} project image">
 </figure>
 <section class="works__left-block">
@@ -89,12 +106,12 @@ function createCard(el) {
     <li>${el.technologies[1]}</li>
     <li>${el.technologies[2]}</li>
   </ul>
-  <a href="#works__card2" class="btn works__action" id="showModal">See Project</a>
+  <a href="#works__card2" class="btn-transition works__action" id="showModal">See Project</a>
 </section>
 `;
 }
 
-const myProjects = projects.map((el, index) => {
+const myProjects = dataProjects.map((el, index) => {
   const article = document.createElement('article');
   article.className = 'works__card';
   if (index % 2 === 1) {
@@ -128,7 +145,7 @@ function createModal(el) {
           <span class="year">2015</span>
         </div>
       </div>
-      <figure class="snapshoot-modal">
+      <figure class="snapshot-modal">
         <img class="img-modal" src="${el.image}" alt="${el.name} project image">
       </figure>
       <div class="modal__description">
@@ -140,11 +157,11 @@ function createModal(el) {
             <li>${el.technologies[2]}</li>
           </ul>
           <div class="modal-buttons">
-            <a href="${el.liveVersion}" class="btn works__action modal-btn">
+            <a href="${el.liveVersion}" class="btn-transition works__action modal-btn">
               See Live
               <img class="modal-icon" src="./img/live-Icon.png" alt="live demo icon"/>
             </a>
-            <a href="${el.source}" class="btn works__action modal-btn">
+            <a href="${el.source}" class="btn-transition works__action modal-btn">
               See Source
               <img class="modal-icon git-modal" src="./img/github_icon_blue.svg" alt="github icon"/>
             </a>
@@ -174,45 +191,9 @@ modalBtn.forEach((el, index) => {
     openModal();
     const modalArticle = document.createElement('article');
     modalArticle.className = 'modal-card';
-    modalArticle.innerHTML = createModal(projects[index]);
+    modalArticle.innerHTML = createModal(dataProjects[index]);
     modalSection.appendChild(modalArticle);
     const closeModalBtn = document.querySelector('#close-button-2');
     closeModalBtn.addEventListener('click', closeModal);
   });
-});
-
-//* **************
-// sticky menu
-//* **************
-
-const header = document.getElementById('header');
-const sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add('sticky');
-  } else {
-    header.classList.remove('sticky');
-  }
-}
-
-window.onscroll = function () { myFunction(); };
-
-// form validation
-
-const form = document.querySelector('#form');
-const email = document.querySelector('#email');
-const msg = document.querySelector('#errorMsg');
-const regex = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)*$/;
-
-form.addEventListener('submit', (event) => {
-  const emailInput = email.value;
-  if (!regex.test(emailInput)) {
-    event.preventDefault();
-    msg.classList.add('showError');
-    msg.textContent = '*The content of the email field has to be in lower case.';
-  } else {
-    msg.classList.remove('showError');
-    msg.innerHTML = '';
-  }
 });
