@@ -2,6 +2,9 @@
 // mobile menu
 // ***************
 
+import './css/style.css';
+const pImage = require('./img/snapshot-Portfolio_mobile.png');
+
 const menu = document.querySelector('#menu-container');
 const closeButton = document.querySelector('.close-button');
 const hamburguer = document.querySelector('#hamburguer-button');
@@ -50,7 +53,7 @@ const dataProjects = [
     name: 'Tonic',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/snapshot-Portfolio1.png',
+    image: pImage,
     technologies: ['html', 'css', 'javaScript'],
     liveVersion: '#',
     source: '#',
@@ -59,25 +62,7 @@ const dataProjects = [
     name: 'Multi-Post Stories',
     description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
     descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/snapshot-Portfolio2.png',
-    technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
-    liveVersion: '#',
-    source: '#',
-  },
-  {
-    name: 'Facebook 360',
-    description: 'Exploring the future of media in Facebook first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.',
-    descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/snapshot-Portfolio3.png',
-    technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
-    liveVersion: '#',
-    source: '#',
-  },
-  {
-    name: 'Uber Navigation',
-    description: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
-    descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/snapshot-Portfolio4.png',
+    image: pImage,
     technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
     liveVersion: '#',
     source: '#',
