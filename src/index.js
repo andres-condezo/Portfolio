@@ -1,78 +1,11 @@
-// ***************
-// mobile menu
-// ***************
-
 import './css/style.css';
-
-const pImage = require('./img/snapshot-Portfolio_mobile.png');
-const githubIcon = require('./img/github_icon.svg');
-const liveIcon = require('./img/like_icon.svg');
-
-const menu = document.querySelector('#menu-container');
-const closeButton = document.querySelector('.close-button');
-const hamburguer = document.querySelector('#hamburguer-button');
-const body = document.querySelector('body');
-const anchors = document.querySelectorAll('.mobile-menu-ul li');
-
-function openMenu() {
-  menu.classList.add('visible');
-  body.classList.add('overflow-hidden');
-}
-
-function closeMenu() {
-  menu.classList.remove('visible');
-  body.classList.remove('overflow-hidden');
-}
-
-hamburguer.addEventListener('click', openMenu);
-closeButton.addEventListener('click', closeMenu);
-anchors.forEach((link) => {
-  link.addEventListener('click', closeMenu);
-});
-
-//* **************
-// sticky menu
-//* **************
-
-const header = document.getElementById('header');
-const sticky = header.offsetTop;
-
-function stickMenu() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add('sticky');
-  } else {
-    header.classList.remove('sticky');
-  }
-}
-
-window.onscroll = () => { stickMenu(); };
+import './components/form.js'
+import './components/mobile-menu.js'
+import data from './data/project-data.json';
 
 // ***************
 // works-section
 // ***************
-
-const dataProjects = [
-  {
-    name: 'Stock Performance',
-    description: 'Stock performance is a web application to check out performance by company to see which one performs the best, based on an external API provided by Financial Modeling Prep. Built with Ract, Redux, and SCSS.',
-    descriptionPopup: 'Stock performance is a web application to check out performance by company to see which one performs the best, based on an external API provided by Financial Modeling Prep. Built with Ract, Redux, and SCSS.',
-    image: 'https://raw.githubusercontent.com/andres-condezo/stock-performance/development/src/assets/screenshot-desktop.png',
-    year: '2022',
-    role: 'Front End',
-    technologies: ['HTML', 'CSS', 'SCSS', 'JavaScript', 'React', 'Redux'],
-    liveVersion: 'https://andres-condezo.github.io/stock-performance/',
-    source: 'https://github.com/andres-condezo/stock-performance',
-  },
-  {
-    name: 'Multi-Post Stories',
-    description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
-    descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: pImage,
-    technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
-    liveVersion: '#',
-    source: '#',
-  },
-];
 
 function createCard(el) {
   return `
@@ -100,7 +33,7 @@ function createCard(el) {
 `;
 }
 
-const myProjects = dataProjects.map((el, index) => {
+const myProjects = data.projects.map((el, index) => {
   const article = document.createElement('article');
   article.className = 'works__card';
   if (index % 2 === 1) {
@@ -145,13 +78,11 @@ function createModal(el) {
             <li>${el.technologies[2]}</li>
           </ul>
           <div class="modal-buttons">
-            <a href="${el.liveVersion}" class="btn-transition works__action modal-btn">
+            <a href="${el.liveVersion}" target="_blank" rel="noopener noreferrer" class="btn-transition works__action modal-btn">
               See Live
-              <img class="modal-icon" src=${liveIcon} alt="live demo icon"/>
             </a>
-            <a href="${el.source}" class="btn-transition works__action modal-btn">
+            <a href="${el.source}" target="_blank" rel="noopener noreferrer" class="btn-transition works__action modal-btn">
               See Source
-              <img class="modal-icon git-modal" src=${githubIcon} alt="github icon"/>
             </a>
           </div>
         </div>
@@ -179,7 +110,7 @@ modalBtn.forEach((el, index) => {
     openModal();
     const modalArticle = document.createElement('article');
     modalArticle.className = 'modal-card';
-    modalArticle.innerHTML = createModal(dataProjects[index]);
+    modalArticle.innerHTML = createModal(data.projects[index]);
     modalSection.appendChild(modalArticle);
     const closeModalBtn = document.querySelector('#close-button-2');
     closeModalBtn.addEventListener('click', closeModal);
