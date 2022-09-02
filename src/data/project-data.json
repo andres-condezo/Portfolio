@@ -1,0 +1,24 @@
+{
+  "projects": [
+    {
+      "name": "Stock Performance",
+      "description": "Stock performance is a web application to check out performance by company to see which one performs the best, based on an external API provided by Financial Modeling Prep. Built with Ract, Redux, and SCSS.",
+      "descriptionPopup": "Stock performance is a web application to check out performance by company to see which one performs the best, based on an external API provided by Financial Modeling Prep. Built with Ract, Redux, and SCSS.",
+      "image": "https://raw.githubusercontent.com/andres-condezo/stock-performance/development/src/assets/screenshot-desktop.png",
+      "year": "2022",
+      "role": "Front End",
+      "technologies": ["HTML", "CSS", "SCSS", "JavaScript", "React", "Redux"],
+      "liveVersion": "https://andres-condezo.github.io/stock-performance/",
+      "source": "https://github.com/andres-condezo/stock-performance"
+    },
+    {
+      "name": "Multi-Post Stories",
+      "description": "Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.",
+      "descriptionPopup": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?",
+      "image": "https://raw.githubusercontent.com/andres-condezo/stock-performance/development/src/assets/screenshot-desktop.png",
+      "technologies": ["html", "Ruby on rails", "css", "javaScript"],
+      "liveVersion": "#",
+      "source": "#"
+    }
+  ]
+}

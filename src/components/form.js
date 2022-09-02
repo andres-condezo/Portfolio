@@ -7,7 +7,7 @@ const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
 const msgInput = document.querySelector('#msg');
 const errorMsgContainer = document.querySelector('#errorMsg');
-const errorMsg = '* The content of the email field has to be in lower case.';
+const errorMsg = '* Please enter a valid email.';
 const regex = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)*$/;
 
 //* **************
@@ -52,9 +52,9 @@ const saveData = () => {
   localStorage.setItem('formData', JSON.stringify(formData));
 };
 
-nameInput.addEventListener('change', saveData);
-emailInput.addEventListener('change', saveData);
-msgInput.addEventListener('change', saveData);
+nameInput.addEventListener('input', saveData);
+emailInput.addEventListener('input', saveData);
+msgInput.addEventListener('input', saveData);
 
 window.addEventListener('load', () => {
   const formData = JSON.parse(localStorage.getItem('formData'));
