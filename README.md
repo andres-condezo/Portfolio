@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://andres-condezo.github.io/Portfolio/)
+[Live Demo Link](https://andres-condezo-monge-portfolio.netlify.app)
 
 
 ## Getting Started
