@@ -4,6 +4,8 @@
 
 import './css/style.css';
 const pImage = require('./img/snapshot-Portfolio_mobile.png');
+const githubIcon = require('./img/github_icon.svg');
+const liveIcon = require('./img/like_icon.svg');
 
 const menu = document.querySelector('#menu-container');
 const closeButton = document.querySelector('.close-button');
@@ -50,13 +52,15 @@ window.onscroll = () => { stickMenu(); };
 
 const dataProjects = [
   {
-    name: 'Tonic',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: pImage,
-    technologies: ['html', 'css', 'javaScript'],
-    liveVersion: '#',
-    source: '#',
+    name: 'Stock Performance',
+    description: 'Stock performance is a web application to check out performance by company to see which one performs the best, based on an external API provided by Financial Modeling Prep. Built with Ract, Redux, and SCSS.',
+    descriptionPopup: 'Stock performance is a web application to check out performance by company to see which one performs the best, based on an external API provided by Financial Modeling Prep. Built with Ract, Redux, and SCSS.',
+    image: 'https://raw.githubusercontent.com/andres-condezo/stock-performance/development/src/assets/screenshot-desktop.png',
+    year: '2022',
+    role: 'Front End',
+    technologies: ['HTML', 'CSS', 'SCSS', 'JavaScript', 'React', 'Redux'],
+    liveVersion: 'https://andres-condezo.github.io/stock-performance/',
+    source: 'https://github.com/andres-condezo/stock-performance',
   },
   {
     name: 'Multi-Post Stories',
@@ -78,11 +82,10 @@ function createCard(el) {
   <div class="works__primary-text">
     <h3 class="works__project-title">${el.name}</h3>
     <div class="frame-2">
-      <span class="client">CANOPY</span>
       <div class="counter"></div>
-      <span class="role">Back End Dev</span>
+      <span class="role">${el.role}</span>
       <div class="counter"></div>
-      <span class="year">2015</span>
+      <span class="year">${el.year}</span>
     </div>
   </div>
   <p class="works__primary-par">${el.description}</p>
@@ -123,11 +126,10 @@ function createModal(el) {
       <div class="works__primary-text">
         <h3 class="modal__project-title">${el.name}</h3>
         <div class="frame-2">
-          <span class="client">CANOPY</span>
           <div class="counter"></div>
-          <span class="role">Back End Dev</span>
+          <span class="role">${el.role}</span>
           <div class="counter"></div>
-          <span class="year">2015</span>
+          <span class="year">${el.year}</span>
         </div>
       </div>
       <figure class="snapshot-modal">
@@ -144,11 +146,11 @@ function createModal(el) {
           <div class="modal-buttons">
             <a href="${el.liveVersion}" class="btn-transition works__action modal-btn">
               See Live
-              <img class="modal-icon" src="./img/live-Icon.png" alt="live demo icon"/>
+              <img class="modal-icon" src=${liveIcon} alt="live demo icon"/>
             </a>
             <a href="${el.source}" class="btn-transition works__action modal-btn">
               See Source
-              <img class="modal-icon git-modal" src="./img/github_icon_blue.svg" alt="github icon"/>
+              <img class="modal-icon git-modal" src=${githubIcon} alt="github icon"/>
             </a>
           </div>
         </div>
