@@ -3,6 +3,7 @@
 // ***************
 
 import './css/style.css';
+
 const pImage = require('./img/snapshot-Portfolio_mobile.png');
 const githubIcon = require('./img/github_icon.svg');
 const liveIcon = require('./img/like_icon.svg');
@@ -121,7 +122,7 @@ for (let i = 0; i < myProjects.length; i += 1) {
 
 function createModal(el) {
   return `
-    <button class="close-button-2" id="close-button-2">x</button>
+    <button type="button" class="close-button-2" id="close-button-2">x</button>
     <section class="works__left-block modal__left-block">
       <div class="works__primary-text">
         <h3 class="modal__project-title">${el.name}</h3>

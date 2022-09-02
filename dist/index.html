@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta charset="UTF-8">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PZRYERR61"></script>
 	<script>
@@ -10,7 +11,6 @@
 
 	  gtag('config', 'G-4PZRYERR61');
 	</script>
-	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
 			integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
@@ -25,7 +25,8 @@
   <section class="menu-warp">
 	<div id="menu-container" class="mobile-menu-container">
 		<div class="bg-img"></div>
-		<button class="close-button">x</button>
+		<button type="button" class="close-button">x</button>
+		<h2>Menu</h2>
 		<ul class="mobile-menu-ul" id="anchors">
 			<li><a href="#works">Portfolio</a></li>
 			<li><a href="#about-myself">About</a></li>
@@ -50,60 +51,61 @@
 	</header>
 
 	<main>
-		<img class="img-test" src="868f9a05f2d16be4e9be.png" alt="img test">
 		<section id="headline" class="headline">
 			<h1>I’m Andrés <br /> Glad to see you!</h1>
 			<p>I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
 			<h2 class="h2-span">LET’S CONNECT</h2>
-			<section class="headline__social-media">
-				<ul class="social-media__ul">
-					<li>
-						<a href="https://twitter.com/andres_condezo"
-							rel="noreferrer noopener"
-							target="_blank">
-							<img src="2e2407a61b105db5f097.svg" alt="twitter logo">
-						</a>
-					</li>
-					<li>
-						<a href="https://www.linkedin.com/in/andres-condezo/"
-							rel="noreferrer noopener"
-							target="_blank">
-							<img src="ba2073ef0c3b4484392c.svg" alt="linkedin logo">
-						</a>
-					</li>
-					<li>
-						<a href="https://ra-condezomonge.medium.com"
-							rel="noreferrer noopener"
-							target="_blank">
-							<img src="eac6f5dfbc3d2891f5b3.svg" alt="medium logo">
-						</a>
-					</li>
-					<li>
-						<a href="https://github.com/andres-condezo"
-							rel="noreferrer noopener"
-							target="_blank">
-							<img src="0a6b454201b0ea66d3c7.svg" alt="github logo">
-						</a>
-					</li>
-					<li>
-						<a href="#" ><img src="52c027ed3e7128fdbdad.svg"  alt="angellist logo"></a>
-					</li>
-				</ul>
-			</section>
+				<div class="headline__social-media">
+					<ul class="social-media__ul">
+						<li>
+							<a href="https://twitter.com/andres_condezo"
+								rel="noreferrer noopener"
+								target="_blank">
+								<img src="2e2407a61b105db5f097.svg" alt="twitter logo">
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/andres-condezo/"
+								rel="noreferrer noopener"
+								target="_blank">
+								<img src="ba2073ef0c3b4484392c.svg" alt="linkedin logo">
+							</a>
+						</li>
+						<li>
+							<a href="https://ra-condezomonge.medium.com"
+								rel="noreferrer noopener"
+								target="_blank">
+								<img src="eac6f5dfbc3d2891f5b3.svg" alt="medium logo">
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/andres-condezo"
+								rel="noreferrer noopener"
+								target="_blank">
+								<img src="0a6b454201b0ea66d3c7.svg" alt="github logo">
+							</a>
+						</li>
+						<li>
+							<a href="#" ><img src="52c027ed3e7128fdbdad.svg"  alt="angellist logo"></a>
+						</li>
+					</ul>
+				</div>
 		</section>
 
-		<section class="works" id="works"></section>
+		<section class="works" id="works">
+				<h2>Projects</h2>
+		</section>
 
-		<section class="about-myself" id="about-myself">
+		<div class="about-myself" id="about-myself">
 			<section class="about-myself__block">
-				<h1 class="about-myself__title">About Myself</h1>
+				<h2 class="about-myself__title modal__project-title">About Myself</h2>
 				<p class="about-myself__primary-par">
 					Hello I’m a software developer! I can help you build a product,
 					feature or website Look through some of my work and experience!
 					If you like what you see and have a project you need coded, don’t hestiate to contact me.
 				</p>
 				<h2 class="h2-span">LET’S CONNECT</h2>
-				<section class="headline__social-media">
+				<div class="headline__social-media">
 					<ul class="social-media__ul">
 						<li>
 							<a href="https://github.com/andres-condezo"
@@ -126,7 +128,7 @@
 								rel="noreferrer noopener"
 								target="_blank">
 								<img src="2e2407a61b105db5f097.svg"
-								alt="twitter logo">
+									alt="twitter logo">
 							</a>
 						</li>
 						<li>
@@ -138,7 +140,7 @@
 						</li>
 					</ul>
 					<a href="#about-myself" class="btn-transition works__resume">Get my resume</a>
-				</section>
+				</div>
 			</section>
 			<section class="about-myself__menu">
 				<ul class="about-myself__ul">
@@ -154,7 +156,7 @@
 					<li><h3 class="about-myself__list-title">Skills</h3></li>
 				</ul>
 			</section>
-		</section>
+		</div>
 
 		<section class="form-container" id="contact">
 			<h3 class="form-title">
@@ -188,10 +190,10 @@
 			</form>
 		</section>
 
-		<section class="modal-container" id="modal-container"></section>
+		<div class="modal-container" id="modal-container"></div>
 </main>
 
-<script src="95793a46ef5a66cdf7b5.js"></script>
+<script src="40c5f4f7c6f58cc5981d.js"></script>
 <script src="ca4a1f7d307f0717a5ac.js"></script>
 </body>
 </html>
