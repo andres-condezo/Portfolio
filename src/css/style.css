@@ -25,6 +25,7 @@
 html {
   font-family: var(--font-sans), sans-serif;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 /* Setting mobile first styles */

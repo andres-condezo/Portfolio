@@ -2,6 +2,12 @@
 // mobile menu
 // ***************
 
+import './css/style.css';
+
+const pImage = require('./img/snapshot-Portfolio_mobile.png');
+const githubIcon = require('./img/github_icon.svg');
+const liveIcon = require('./img/like_icon.svg');
+
 const menu = document.querySelector('#menu-container');
 const closeButton = document.querySelector('.close-button');
 const hamburguer = document.querySelector('#hamburguer-button');
@@ -47,37 +53,21 @@ window.onscroll = () => { stickMenu(); };
 
 const dataProjects = [
   {
-    name: 'Tonic',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/snapshot-Portfolio1.png',
-    technologies: ['html', 'css', 'javaScript'],
-    liveVersion: '#',
-    source: '#',
+    name: 'Stock Performance',
+    description: 'Stock performance is a web application to check out performance by company to see which one performs the best, based on an external API provided by Financial Modeling Prep. Built with Ract, Redux, and SCSS.',
+    descriptionPopup: 'Stock performance is a web application to check out performance by company to see which one performs the best, based on an external API provided by Financial Modeling Prep. Built with Ract, Redux, and SCSS.',
+    image: 'https://raw.githubusercontent.com/andres-condezo/stock-performance/development/src/assets/screenshot-desktop.png',
+    year: '2022',
+    role: 'Front End',
+    technologies: ['HTML', 'CSS', 'SCSS', 'JavaScript', 'React', 'Redux'],
+    liveVersion: 'https://andres-condezo.github.io/stock-performance/',
+    source: 'https://github.com/andres-condezo/stock-performance',
   },
   {
     name: 'Multi-Post Stories',
     description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
     descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/snapshot-Portfolio2.png',
-    technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
-    liveVersion: '#',
-    source: '#',
-  },
-  {
-    name: 'Facebook 360',
-    description: 'Exploring the future of media in Facebook first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.',
-    descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/snapshot-Portfolio3.png',
-    technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
-    liveVersion: '#',
-    source: '#',
-  },
-  {
-    name: 'Uber Navigation',
-    description: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
-    descriptionPopup: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod nesciunt doloremque eveniet, recusandae esse voluptatibus sapiente optio totam! Aliquam deleniti necessitatibus debitis alias magnam mollitia culpa beatae totam qui?',
-    image: './img/snapshot-Portfolio4.png',
+    image: pImage,
     technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
     liveVersion: '#',
     source: '#',
@@ -93,11 +83,10 @@ function createCard(el) {
   <div class="works__primary-text">
     <h3 class="works__project-title">${el.name}</h3>
     <div class="frame-2">
-      <span class="client">CANOPY</span>
       <div class="counter"></div>
-      <span class="role">Back End Dev</span>
+      <span class="role">${el.role}</span>
       <div class="counter"></div>
-      <span class="year">2015</span>
+      <span class="year">${el.year}</span>
     </div>
   </div>
   <p class="works__primary-par">${el.description}</p>
@@ -133,16 +122,15 @@ for (let i = 0; i < myProjects.length; i += 1) {
 
 function createModal(el) {
   return `
-    <button class="close-button-2" id="close-button-2">x</button>
+    <button type="button" class="close-button-2" id="close-button-2">x</button>
     <section class="works__left-block modal__left-block">
       <div class="works__primary-text">
         <h3 class="modal__project-title">${el.name}</h3>
         <div class="frame-2">
-          <span class="client">CANOPY</span>
           <div class="counter"></div>
-          <span class="role">Back End Dev</span>
+          <span class="role">${el.role}</span>
           <div class="counter"></div>
-          <span class="year">2015</span>
+          <span class="year">${el.year}</span>
         </div>
       </div>
       <figure class="snapshot-modal">
@@ -159,11 +147,11 @@ function createModal(el) {
           <div class="modal-buttons">
             <a href="${el.liveVersion}" class="btn-transition works__action modal-btn">
               See Live
-              <img class="modal-icon" src="./img/live-Icon.png" alt="live demo icon"/>
+              <img class="modal-icon" src=${liveIcon} alt="live demo icon"/>
             </a>
             <a href="${el.source}" class="btn-transition works__action modal-btn">
               See Source
-              <img class="modal-icon git-modal" src="./img/github_icon_blue.svg" alt="github icon"/>
+              <img class="modal-icon git-modal" src=${githubIcon} alt="github icon"/>
             </a>
           </div>
         </div>

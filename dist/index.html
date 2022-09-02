@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta charset="UTF-8">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PZRYERR61"></script>
 	<script>
@@ -10,9 +11,7 @@
 
 	  gtag('config', 'G-4PZRYERR61');
 	</script>
-	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./styles/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
 			integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
 			crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,13 +19,14 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	<title>My Portfolio</title>
-</head>
+<script defer src="main.js"></script></head>
 
 <body>
   <section class="menu-warp">
 	<div id="menu-container" class="mobile-menu-container">
 		<div class="bg-img"></div>
-		<button class="close-button">x</button>
+		<button type="button" class="close-button">x</button>
+		<h2>Menu</h2>
 		<ul class="mobile-menu-ul" id="anchors">
 			<li><a href="#works">Portfolio</a></li>
 			<li><a href="#about-myself">About</a></li>
@@ -55,106 +55,108 @@
 			<h1>I’m Andrés <br /> Glad to see you!</h1>
 			<p>I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
 			<h2 class="h2-span">LET’S CONNECT</h2>
-			<section class="headline__social-media">
-				<ul class="social-media__ul">
-					<li>
-						<a href="https://twitter.com/andres_condezo"
-							rel="noreferrer noopener"
-							target="_blank">
-							<img src="./img/twitter_icon.svg" alt="twitter logo">
-						</a>
-					</li>
-					<li>
-						<a href="https://www.linkedin.com/in/andres-condezo/"
-							rel="noreferrer noopener"
-							target="_blank">
-							<img src="./img/linkedin_icon.svg" alt="linkedin logo">
-						</a>
-					</li>
-					<li>
-						<a href="https://ra-condezomonge.medium.com"
-							rel="noreferrer noopener"
-							target="_blank">
-							<img src="./img/medium_icon.svg" alt="medium logo">
-						</a>
-					</li>
-					<li>
-						<a href="https://github.com/andres-condezo"
-							rel="noreferrer noopener"
-							target="_blank">
-							<img src="./img/github_icon.svg" alt="github logo">
-						</a>
-					</li>
-					<li>
-						<a href="#" ><img src="./img/like_icon.svg"  alt="angellist logo"></a>
-					</li>
-				</ul>
-			</section>
-		</section>
-
-		<section class="works" id="works"></section>
-
-		<section class="about-myself" id="about-myself">
-			<section class="about-myself__block">
-				<h1 class="about-myself__title">About Myself</h1>
-				<p class="about-myself__primary-par">
-					Hello I’m a software developer! I can help you build a product,
-					feature or website Look through some of my work and experience!
-					If you like what you see and have a project you need coded, don’t hestiate to contact me.
-				</p>
-				<h2 class="h2-span">LET’S CONNECT</h2>
-				<section class="headline__social-media">
+				<div class="headline__social-media">
 					<ul class="social-media__ul">
 						<li>
-							<a href="https://github.com/andres-condezo"
-								rel="noreferrer noopener" target="_blank">
-								<img src="./img/github_icon.svg" alt="github logo">
+							<a href="https://twitter.com/andres_condezo"
+								rel="noreferrer noopener"
+								target="_blank">
+								<img src="2e2407a61b105db5f097.svg" alt="twitter logo">
 							</a>
 						</li>
 						<li>
 							<a href="https://www.linkedin.com/in/andres-condezo/"
 								rel="noreferrer noopener"
 								target="_blank">
-								<img src="./img/linkedin_icon.svg" alt="linkedin logo">
-							</a>
-						</li>
-						<li>
-							<a href="#"><img src="./img/like_icon.svg" alt="angellist logo"></a>
-						</li>
-						<li>
-							<a href="https://twitter.com/andres_condezo"
-								rel="noreferrer noopener"
-								target="_blank">
-								<img src="./img/twitter_icon.svg"
-								alt="twitter logo">
+								<img src="ba2073ef0c3b4484392c.svg" alt="linkedin logo">
 							</a>
 						</li>
 						<li>
 							<a href="https://ra-condezomonge.medium.com"
 								rel="noreferrer noopener"
 								target="_blank">
-								<img src="./img/medium_icon.svg" alt="medium logo">
+								<img src="eac6f5dfbc3d2891f5b3.svg" alt="medium logo">
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/andres-condezo"
+								rel="noreferrer noopener"
+								target="_blank">
+								<img src="0a6b454201b0ea66d3c7.svg" alt="github logo">
+							</a>
+						</li>
+						<li>
+							<a href="#" ><img src="52c027ed3e7128fdbdad.svg"  alt="angellist logo"></a>
+						</li>
+					</ul>
+				</div>
+		</section>
+
+		<section class="works" id="works">
+				<h2>Projects</h2>
+		</section>
+
+		<div class="about-myself" id="about-myself">
+			<section class="about-myself__block">
+				<h2 class="about-myself__title modal__project-title">About Myself</h2>
+				<p class="about-myself__primary-par">
+					Hello I’m a software developer! I can help you build a product,
+					feature or website Look through some of my work and experience!
+					If you like what you see and have a project you need coded, don’t hestiate to contact me.
+				</p>
+				<h2 class="h2-span">LET’S CONNECT</h2>
+				<div class="headline__social-media">
+					<ul class="social-media__ul">
+						<li>
+							<a href="https://github.com/andres-condezo"
+								rel="noreferrer noopener" target="_blank">
+								<img src="0a6b454201b0ea66d3c7.svg" alt="github logo">
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/andres-condezo/"
+								rel="noreferrer noopener"
+								target="_blank">
+								<img src="ba2073ef0c3b4484392c.svg" alt="linkedin logo">
+							</a>
+						</li>
+						<li>
+							<a href="#"><img src="52c027ed3e7128fdbdad.svg" alt="angellist logo"></a>
+						</li>
+						<li>
+							<a href="https://twitter.com/andres_condezo"
+								rel="noreferrer noopener"
+								target="_blank">
+								<img src="2e2407a61b105db5f097.svg"
+									alt="twitter logo">
+							</a>
+						</li>
+						<li>
+							<a href="https://ra-condezomonge.medium.com"
+								rel="noreferrer noopener"
+								target="_blank">
+								<img src="eac6f5dfbc3d2891f5b3.svg" alt="medium logo">
 							</a>
 						</li>
 					</ul>
 					<a href="#about-myself" class="btn-transition works__resume">Get my resume</a>
-				</section>
+				</div>
 			</section>
 			<section class="about-myself__menu">
 				<ul class="about-myself__ul">
 					<li>
 						<h3 class="about-myself__list-title">Langguages</h3>
 						<ul class="langguages-ul">
-							<li class="lang-tags"><img src="./img/js.png" alt="java script logo">JavaScript</li>
-							<li class="lang-tags"><img src="./img/html.png" alt="html logo">HTML</li>
-							<li class="lang-tags"><img src="./img/css.png" alt="css logo">CSS</li>
+							<li class="lang-tags"><img src="c25c19777cdaed890944.png" alt="java script logo">JavaScript</li>
+							<li class="lang-tags"><img src="a4b20d8a881388db9b51.png" alt="html logo">HTML</li>
+							<li class="lang-tags"><img src="d4f131f52affd95a82e5.png" alt="css logo">CSS</li>
 						</ul>
 					</li>
 					<li><h3 class="about-myself__list-title">Frameworks</h3></li>
 					<li><h3 class="about-myself__list-title">Skills</h3></li>
 				</ul>
 			</section>
-		</section>
+		</div>
 
 		<section class="form-container" id="contact">
 			<h3 class="form-title">
@@ -188,10 +190,10 @@
 			</form>
 		</section>
 
-		<section class="modal-container" id="modal-container"></section>
+		<div class="modal-container" id="modal-container"></div>
 </main>
 
-<script src="./index.js"></script>
-<script src="./form.js"></script>
+<script src="40c5f4f7c6f58cc5981d.js"></script>
+<script src="ca4a1f7d307f0717a5ac.js"></script>
 </body>
 </html>
