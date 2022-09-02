@@ -1,6 +1,6 @@
 import './css/style.css';
-import './components/form.js'
-import './components/mobile-menu.js'
+import './components/form.js';
+import './components/mobile-menu.js';
 import data from './data/project-data.json';
 
 // ***************
@@ -93,6 +93,7 @@ function createModal(el) {
 
 const modalBtn = document.querySelectorAll('#showModal');
 const modalSection = document.getElementById('modal-container');
+const body = document.querySelector('body');
 
 function openModal() {
   modalSection.classList.add('show-modal');
