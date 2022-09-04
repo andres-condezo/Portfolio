@@ -26,6 +26,7 @@ html {
   font-family: var(--font-sans), sans-serif;
   font-size: 62.5%;
   scroll-behavior: smooth;
+  transition: all 0.3s ease-out;
 }
 
 /* Setting mobile first styles */
@@ -41,6 +42,15 @@ body {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.fa-brands {
+  font-size: 2rem;
+  color: var(--neutral-color);
+}
+
+.fa-brands:hover {
+  color: purple;
 }
 
 .btn-transition {
