@@ -4,6 +4,18 @@ import './components/mobile-menu.js';
 import data from './data/project-data.json';
 
 // ***************
+// tech-tags
+// ***************
+
+const createTags = (container, i) => {
+  data.projects[i].technologies.forEach((_el, index) => {
+    const liItem = document.createElement('li');
+    liItem.innerHTML = data.projects[i].technologies[index];
+    container.appendChild(liItem);
+  });
+};
+
+// ***************
 // works-section
 // ***************
 
@@ -23,11 +35,7 @@ function createCard(el) {
     </div>
   </div>
   <p class="works__primary-par">${el.description}</p>
-  <ul class="works__tags">
-    <li>${el.technologies[0]}</li>
-    <li>${el.technologies[1]}</li>
-    <li>${el.technologies[2]}</li>
-  </ul>
+  <ul class="works__tags" id="${el.name}"> </ul>
   <a href="#works__card2" class="btn-transition works__action" id="showModal">See Project</a>
 </section>
 `;
@@ -47,6 +55,8 @@ const worksSection = document.getElementById('works');
 
 for (let i = 0; i < myProjects.length; i += 1) {
   worksSection.appendChild(myProjects[i]);
+  const ulTags = document.getElementById(data.projects[i].name);
+  createTags(ulTags, i);
 }
 
 // ***************
@@ -72,11 +82,7 @@ function createModal(el) {
       <div class="modal__description">
         <p class="modal__primary-par">${el.descriptionPopup}</p>
         <div class="block-r">
-          <ul class="works__tags modal__tags">
-            <li>${el.technologies[0]}</li>
-            <li>${el.technologies[1]}</li>
-            <li>${el.technologies[2]}</li>
-          </ul>
+          <ul class="works__tags modal__tags" id="modal-id"> </ul>
           <div class="modal-buttons">
             <a href="${el.liveVersion}" target="_blank" rel="noopener noreferrer" class="btn-transition works__action modal-btn">
               See Live
@@ -106,13 +112,17 @@ function closeModal() {
   modalSection.innerHTML = '';
 }
 
-modalBtn.forEach((el, index) => {
+modalBtn.forEach((el, i) => {
   el.addEventListener('click', () => {
     openModal();
     const modalArticle = document.createElement('article');
     modalArticle.className = 'modal-card';
-    modalArticle.innerHTML = createModal(data.projects[index]);
+    modalArticle.innerHTML = createModal(data.projects[i]);
     modalSection.appendChild(modalArticle);
+
+    const modalTags = document.getElementById('modal-id');
+    createTags(modalTags, i);
+
     const closeModalBtn = document.querySelector('#close-button-2');
     closeModalBtn.addEventListener('click', closeModal);
   });
