@@ -9,11 +9,11 @@ import data from './data/project-data.json';
 
 const createTags = (container, i) => {
   data.projects[i].technologies.forEach((_el, index) => {
-    const liItem = document.createElement("li");
+    const liItem = document.createElement('li');
     liItem.innerHTML = data.projects[i].technologies[index];
     container.appendChild(liItem);
-  })
-}
+  });
+};
 
 // ***************
 // works-section
@@ -58,7 +58,6 @@ for (let i = 0; i < myProjects.length; i += 1) {
   const ulTags = document.getElementById(data.projects[i].name);
   createTags(ulTags, i);
 }
-
 
 // ***************
 // modal section
@@ -121,7 +120,7 @@ modalBtn.forEach((el, i) => {
     modalArticle.innerHTML = createModal(data.projects[i]);
     modalSection.appendChild(modalArticle);
 
-    const modalTags = document.getElementById("modal-id");
+    const modalTags = document.getElementById('modal-id');
     createTags(modalTags, i);
 
     const closeModalBtn = document.querySelector('#close-button-2');
