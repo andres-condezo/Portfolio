@@ -1,5 +1,6 @@
-/* CSS variables */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* CSS variables */
 
 :root {
   --primary-color: #0F3D3E;
@@ -10,15 +11,19 @@
 }
 
 /* Reset default styles */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* global selectors */
+
 h1 {
   color: var(--white-color);
   margin-bottom: 1.6rem;
+  font-size: 4rem;
 }
 
 h2 {
@@ -96,7 +101,7 @@ form > input,
 form > textarea {
   border: 1px solid silver;
   border-radius: 1.2rem;
-  width: 90%;
+  width: 100%;
   padding: 1.4rem;
   background-color: var(--white-color);
   font-size: 1.8rem;
@@ -141,9 +146,13 @@ main {
   align-items: center;
 }
 
+/* desktop menu */
+
 nav {
   display: none;
 }
+
+/* mobile menu */
 
 .mobile-menu-section {
   width: 100%;
@@ -191,18 +200,50 @@ nav {
   font-size: 1.2rem;
 }
 
+/* social-media-ul */
+
 .media-span {
   display: block;
   font-weight: normal;
   margin-bottom: 2rem;
 }
 
+.social-media-ul {
+  margin-bottom: 4rem;
+}
+
+.fa-brands {
+  font-size: 2.6rem;
+  margin-left: 1rem;
+  color: var(--neutral-color);
+}
+
+.fa-brands:hover {
+  color: purple;
+}
+
+/* headline */
+
 .headline {
   color: white;
   padding: 16rem 4rem 12rem 4rem;
   background-color: var(--secondary-color);
+
+  /* background-image: */
+  /*   url("../img/stripes.jpg"); */
+  /* background-blend-mode: color-dodge; */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+
   z-index: 40;
 }
+
+.headline span {
+  color: var(--white-color);
+}
+
+/* works */
 
 .works {
   background-color: var(--white-color);
@@ -212,27 +253,6 @@ nav {
   align-items: center;
   gap: 6rem;
   z-index: 30;
-}
-
-.about-myself {
-  background-color: var(--white-color);
-  padding: 15rem 4rem 12rem 4rem;
-  z-index: 20;
-}
-
-.headline span {
-  color: var(--white-color);
-}
-
-.about-myself span {
-  color: var(--primary-color);
-}
-
-.contact {
-  color: var(--white-color);
-  background-color: var(--secondary-color);
-  padding: 15rem 4rem 18rem 4rem;
-  z-index: 10;
 }
 
 .span-container {
@@ -263,18 +283,16 @@ nav {
   border-radius: 1.2rem;
 }
 
-.social-media-ul {
-  margin-bottom: 4rem;
+/* about-myself */
+
+.about-myself {
+  background-color: var(--white-color);
+  padding: 15rem 4rem 12rem 4rem;
+  z-index: 20;
 }
 
-.fa-brands {
-  font-size: 2.6rem;
-  margin-left: 1rem;
-  color: var(--neutral-color);
-}
-
-.fa-brands:hover {
-  color: purple;
+.about-myself span {
+  color: var(--primary-color);
 }
 
 .about-myself-skills {
@@ -338,10 +356,26 @@ details > ul > li:before {
   margin-right: 1rem;
 }
 
+/* contact */
+
+.contact {
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+  padding: 15rem 4rem 18rem 4rem;
+  z-index: 10;
+}
+
 .form-title,
 .form-p {
   text-align: center;
+}
+
+.form-title {
   color: var(--white-color);
+}
+
+.form-p {
+  color: white;
 }
 
 .form-p {
@@ -350,6 +384,51 @@ details > ul > li:before {
 
 form .btn {
   margin-top: 2rem;
+}
+
+/* modal */
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+  position: fixed;
+}
+
+.show-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.modal-card {
+  width: 94%;
+  height: 94%;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.close-btn {
+  align-self: flex-end;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
 }
 
 /* animations */

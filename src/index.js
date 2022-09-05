@@ -63,7 +63,7 @@ function createModal(el) {
   return `
     <button type="button" class="close-btn" id="close-btn">x</button>
     <div class="section-a">
-      <h3">${el.name}</h3>
+      <h3>${el.name}</h3>
       <div class="span-container">
         <span>${el.company}</span>
         <div class="counter"></div>
@@ -79,7 +79,7 @@ function createModal(el) {
     <div class="section-b">
       <p class="modal-par">${el.descriptionPopup}</p>
       <div class="block-r">
-        <ul class="modal-tags-container" id="modal-id"> </ul>
+        <ul class="tags-container" id="modal-id"> </ul>
         <div class="modal-buttons">
           <a href="${el.liveVersion}" target="_blank" rel="noopener noreferrer" class="btn">
             See Live
@@ -119,7 +119,7 @@ modalBtn.forEach((el, i) => {
     const modalTags = document.getElementById('modal-id');
     createTags(modalTags, i);
 
-    const closeModalBtn = document.querySelector('#close-button-2');
+    const closeModalBtn = document.querySelector('#close-btn');
     closeModalBtn.addEventListener('click', closeModal);
   });
 });
