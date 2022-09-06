@@ -105,6 +105,7 @@ form > textarea {
   padding: 1.4rem;
   background-color: var(--white-color);
   font-size: 1.8rem;
+  font-family: var(--font-sans);
 }
 
 .btn {
@@ -138,23 +139,9 @@ header {
   width: 100%;
 }
 
-main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* desktop menu */
+/* menu */
 
 nav {
-  display: none;
-}
-
-/* mobile menu */
-
-.mobile-menu-section {
   width: 100%;
   height: 8rem;
   position: fixed;
@@ -169,7 +156,7 @@ nav {
   box-shadow: 0rem 0rem 1rem 0.3rem rgba(0, 0, 0, 0.5);
 }
 
-.mobile-menu-section ul {
+nav ul {
   width: 90%;
   height: 100%;
   display: flex;
@@ -177,27 +164,35 @@ nav {
   align-items: center;
 }
 
-.mobile-menu-section li {
+nav li {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.mobile-menu-section a {
+nav a {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.mobile-menu-section i {
+nav i {
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
 }
 
-.mobile-menu-section span {
+nav span {
   font-size: 1.2rem;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* social-media-ul */
@@ -226,16 +221,8 @@ nav {
 
 .headline {
   color: white;
-  padding: 16rem 4rem 12rem 4rem;
+  padding: 14rem 4rem 8rem 4rem;
   background-color: var(--secondary-color);
-
-  /* background-image: */
-  /*   url("../img/stripes.jpg"); */
-  /* background-blend-mode: color-dodge; */
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
-  /* background-position: center; */
-
   z-index: 40;
 }
 
@@ -273,7 +260,7 @@ nav {
 
 .tags-container {
   flex-wrap: wrap;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .tags-container li {
@@ -419,7 +406,30 @@ form .btn {
   padding-top: 2rem;
   display: flex;
   flex-direction: column;
+}
+
+.modal-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-card p {
+  margin-bottom: 3rem;
+  justify-content: center;
+  text-align: justify;
+  padding: 1rem;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  height: 60%;
 }
 
 .close-btn {
@@ -445,8 +455,144 @@ form .btn {
 }
 
 /* media queries */
+
 @media only screen and (min-width: 480px) {
-  .mobile-menu-section {
-    display: none;
+  header {
+    all: unset;
+    width: 8rem;
+  }
+
+  nav {
+    all: unset;
+    width: 8rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    background-color: var(--secondary-color);
+    box-shadow: 11px 1px 11px -5px rgba(0,0,0,0.38);
+    -webkit-box-shadow: 11px 1px 11px -5px rgba(0,0,0,0.38);
+    -moz-box-shadow: 11px 1px 11px -5px rgba(0,0,0,0.38);
+  }
+
+  nav ul {
+    all: unset;
+    height: 28rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav span {
+    all: unset;
+    font-size: 1rem;
+  }
+
+  main {
+    margin-left: 6rem;
+    width: calc(100% - 8rem);
+  }
+
+  section {
+    width: 100%;
+    padding: 18rem 0 12rem 0 !important;
+    border-radius: 0 0 40px 0 !important;
+    margin-top: -6rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headline h1 {
+    text-align: center;
+  }
+
+  .headline p {
+    width: 50%;
+    text-align: center;
+  }
+
+  .headline p,
+  .about-myself p {
+    margin-bottom: 6rem;
+  }
+
+  .works-card {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    padding: 4rem;
+  }
+
+  .works-card:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+
+  .works-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  figure {
+    width: 50%;
+    height: 36rem;
+    margin: 0;
+  }
+
+  .span-container {
+    width: 50%;
+  }
+
+  .about-myself {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .about-myself-info {
+    width: 40%;
+    padding: 4rem;
+  }
+  
+  .about-myself-skills {
+    width: 40%;
+    padding: 4rem;
+  }
+
+  .contact {
+    border-radius: 0 0 0 0 !important;
+  }
+  
+  form {
+    width: 50%;
+  }
+
+  .modal-card {
+    width: 95%;
+  }
+
+  .modal-wrap {
+    flex-direction: row;
+  }
+
+  .modal-header {
+    width: 50%;
+  }
+
+  .modal-footer {
+    width: 50%;
   }
 }

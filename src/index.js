@@ -22,17 +22,21 @@ function createCard(el) {
   return `
 <figure><img src="${el.image}" alt="${el.name} project image"></figure>
 <div class="works-info">
-  <h3>${el.name}</h3>
-  <div class="span-container">
-    <span>${el.company}</span>
-    <div class="counter"></div>
-    <span>${el.role}</span>
-    <div class="counter"></div>
-    <span>${el.year}</span>
+  <div class="block-u">
+    <h3>${el.name}</h3>
+    <div class="span-container">
+      <span>${el.company}</span>
+      <div class="counter"></div>
+      <span>${el.role}</span>
+      <div class="counter"></div>
+      <span>${el.year}</span>
+    </div>
+    <p>${el.description}</p>
   </div>
-  <p>${el.description}</p>
-  <ul class="tags-container" id="${el.name}"> </ul>
-  <a href="#works-card" class="btn" id="showModal">See Project</a>
+  <div class="block-d">
+    <ul class="tags-container" id="${el.name}"> </ul>
+    <a href="#works-card" class="btn" id="showModal">See Project</a>
+  </div>
 </div>
 `;
 }
@@ -40,9 +44,6 @@ function createCard(el) {
 const myProjects = data.projects.map((el, index) => {
   const article = document.createElement('article');
   article.className = 'works-card';
-  if (index % 2 === 1) {
-    article.classList.add('card2');
-  }
   article.innerHTML = createCard(el);
   return article;
 });
@@ -62,33 +63,38 @@ for (let i = 0; i < myProjects.length; i += 1) {
 function createModal(el) {
   return `
     <button type="button" class="close-btn" id="close-btn">x</button>
-    <div class="section-a">
-      <h3>${el.name}</h3>
-      <div class="span-container">
-        <span>${el.company}</span>
-        <div class="counter"></div>
-        <span>${el.role}</span>
-        <div class="counter"></div>
-        <span>${el.year}</span>
+    <div class="modal-wrap">
+      <div class="modal-header">
+        <div class="section-a">
+          <h3>${el.name}</h3>
+          <div class="span-container">
+            <span>${el.company}</span>
+            <div class="counter"></div>
+            <span>${el.role}</span>
+            <div class="counter"></div>
+            <span>${el.year}</span>
+          </div>
+        </div>
+        <figure class="img-container">
+          <img src="${el.image}" alt="${el.name} project image">
+        </figure>
       </div>
-      <figure class="img-container">
-        <img src="${el.image}" alt="${el.name} project image">
-      </figure>
-    </div>
 
-    <div class="section-b">
-      <p class="modal-par">${el.descriptionPopup}</p>
-      <div class="block-r">
-        <ul class="tags-container" id="modal-id"> </ul>
-        <div class="modal-buttons">
-          <a href="${el.liveVersion}" target="_blank" rel="noopener noreferrer" class="btn">
-            See Live
-          </a>
-          <a href="${el.source}" target="_blank" rel="noopener noreferrer" class="btn">
-            See Source
-          </a>
+      <div class="modal-footer">
+        <p class="modal-par">${el.descriptionPopup}</p>
+        <div class="block-r">
+          <ul class="tags-container" id="modal-id"> </ul>
+          <div class="modal-buttons">
+            <a href="${el.liveVersion}" target="_blank" rel="noopener noreferrer" class="btn">
+              See Live
+            </a>
+            <a href="${el.source}" target="_blank" rel="noopener noreferrer" class="btn">
+              See Source
+            </a>
+          </div>
         </div>
       </div>
+
     </div>
 `;
 }
