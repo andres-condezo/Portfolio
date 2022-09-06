@@ -17,200 +17,173 @@
 			crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	<title>My Portfolio</title>
 </head>
 
 <body>
-  <section class="menu-warp">
-	<div id="menu-container" class="mobile-menu-container">
-		<div class="bg-img"></div>
-		<button type="button" class="close-button">x</button>
-		<h2>Menu</h2>
-		<ul class="mobile-menu-ul" id="anchors">
-			<li><a href="#works">Portfolio</a></li>
-			<li><a href="#about-myself">About</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</ul>
-	</div>
-	</section>
-	<header id="header">
+	<header>
 		<nav>
-			<ul class="header__ul">
-				<li><a class="header__logo" href="#">Andrés</a></li>
-				<li><a href="#" id="hamburguer-button" class="nav__button"><i class="fas fa-bars"></i></a></li>
-				<li class="desktop-menu-container">
-					<ul class="desktop-menu">
-						<li><a href="#works">Portfolio</a></li>
-						<li><a href="#about-myself">About</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</li>
+			<ul>
+				<li><a href="#headline">
+					<i class="fa-solid fa-house"></i>
+					<span>Home</span>
+				</a></li>
+				<li><a href="#works">
+					<i class="fa-solid fa-folder"></i>
+					<span>Portfolio</span>
+				</a></li>
+				<li><a href="#about-myself">
+					<i class="fa-solid fa-user"></i>
+					<span>About</span>
+				</a></li>
+				<li><a href="#contact">
+					<i class="fa-solid fa-address-book"></i>
+					<span>Contact</span>
+				</a></li>
 			</ul>
 		</nav>
 	</header>
-
 	<main>
-		<section id="headline" class="headline">
+		<section class="headline" id="headline">
 			<h1>I’m Andrés<br /> Glad to see you!</h1>
 			<p>I’m a software developer! I can help you build a product , feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
-			<h2 class="h2-span">LET’S CONNECT</h2>
-				<div class="headline__social-media">
-					<ul class="social-media__ul">
-						<li>
-							<a href="https://twitter.com/andres_condezo"
-								rel="noreferrer noopener"
-								target="_blank">
-								<i class="fa-brands fa-twitter"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.linkedin.com/in/andres-condezo/"
-								rel="noreferrer noopener"
-								target="_blank">
-								<i class="fa-brands fa-linkedin-in"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://ra-condezomonge.medium.com"
-								rel="noreferrer noopener"
-								target="_blank">
-								<i class="fa-brands fa-medium"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://github.com/andres-condezo"
-								rel="noreferrer noopener"
-								target="_blank">
-								<i class="fa-brands fa-github"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://angel.co/u/roberto-andres-condezo-monge"
-								rel="noreferrer noopener"
-								target="_blank">
-								<i class="fa-brands fa-angellist"></i>
-							</a>
-						</li>
-					</ul>
-				</div>
+			<span class="media-span">LET’S CONNECT</span>
+			<ul class="social-media-ul">
+				<li><a href="https://twitter.com/andres_condezo"
+						rel="noreferrer noopener"
+						target="_blank">
+						<i class="fa-brands fa-twitter"></i>
+				</a></li>
+				<li><a href="https://www.linkedin.com/in/andres-condezo/"
+						rel="noreferrer noopener"
+						target="_blank">
+						<i class="fa-brands fa-linkedin-in"></i>
+				</a></li>
+				<li><a href="https://ra-condezomonge.medium.com"
+						rel="noreferrer noopener"
+						target="_blank">
+						<i class="fa-brands fa-medium"></i>
+				</a></li>
+				<li><a href="https://github.com/andres-condezo"
+						rel="noreferrer noopener"
+						target="_blank">
+						<i class="fa-brands fa-github"></i>
+				</a></li>
+				<li><a href="https://angel.co/u/roberto-andres-condezo-monge"
+						rel="noreferrer noopener"
+						target="_blank">
+						<i class="fa-brands fa-angellist"></i>
+				</a></li>
+			</ul>
 		</section>
 
-		<section class="works" id="works">
-				<h2>Projects</h2>
-		</section>
+		<section class="works" id="works"> </section>
 
-		<div class="about-myself" id="about-myself">
-			<section class="about-myself__block">
-				<h2 class="about-myself__title modal__project-title">About Myself</h2>
-				<p class="about-myself__primary-par">
+		<section class="about-myself" id="about-myself">
+			<div class="about-myself-info">
+				<h2>About Myself</h2>
+				<p>
 					Hello I’m a software developer! I can help you build a product,
 					feature or website Look through some of my work and experience!
 					If you like what you see and have a project you need coded, don’t hestiate to contact me.
 				</p>
-				<h2 class="h2-span">LET’S CONNECT</h2>
-				<div class="headline__social-media">
-					<ul class="social-media__ul">
-						<li>
-							<a href="https://twitter.com/andres_condezo"
-								rel="noreferrer noopener"
-								target="_blank">
-								<i class="fa-brands fa-twitter"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.linkedin.com/in/andres-condezo/"
-								rel="noreferrer noopener"
-								target="_blank">
-								<i class="fa-brands fa-linkedin-in"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://ra-condezomonge.medium.com"
-								rel="noreferrer noopener"
-								target="_blank">
-								<i class="fa-brands fa-medium"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://github.com/andres-condezo"
-								rel="noreferrer noopener"
-								target="_blank">
-								<i class="fa-brands fa-github"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://angel.co/u/roberto-andres-condezo-monge"
-								rel="noreferrer noopener"
-								target="_blank">
-								<i class="fa-brands fa-angellist"></i>
-							</a>
-						</li>
-					</ul>
-					<a href="#about-myself" class="btn-transition works__resume">Get my resume</a>
-				</div>
-			</section>
+				<span class="media-span">LET’S CONNECT</span>
+				<ul class="social-media-ul">
+					<li><a href="https://twitter.com/andres_condezo"
+							rel="noreferrer noopener"
+							target="_blank">
+							<i class="fa-brands fa-twitter"></i>
+					</a></li>
+					<li><a href="https://www.linkedin.com/in/andres-condezo/"
+							rel="noreferrer noopener"
+							target="_blank">
+							<i class="fa-brands fa-linkedin-in"></i>
+					</a></li>
+					<li><a href="https://ra-condezomonge.medium.com"
+							rel="noreferrer noopener"
+							target="_blank">
+							<i class="fa-brands fa-medium"></i>
+					</a></li>
+					<li><a href="https://github.com/andres-condezo"
+							rel="noreferrer noopener"
+							target="_blank">
+							<i class="fa-brands fa-github"></i>
+					</a></li>
+					<li><a href="https://angel.co/u/roberto-andres-condezo-monge"
+							rel="noreferrer noopener"
+							target="_blank">
+							<i class="fa-brands fa-angellist"></i>
+					</a></li>
+				</ul>
+				<a
+					href="https://drive.google.com/file/d/1I5p7DhpdEXQcnhP19fZkifrtMP4d7uLn/view"
+					rel="noreferrer noopener"
+					target="_blank"
+					class="btn btn-black">
+					Get my resume
+				</a>
+			</div>
 
-			<section class="about-myself__menu">
+			<div class="about-myself-skills">
 				<details>
-					<summary>
-						<h3 class="about-myself__list-title">Languages</h3>
-						<i class="fa-solid fa-chevron-down"></i>
-					</summary>
-					<ul class="languages-ul">
-						<li class="lang-tags">JavaScript</li>
-						<li class="lang-tags">Python</li>
-						<li class="lang-tags">HTML</li>
-						<li class="lang-tags">CSS</li>
+					<summary><h4>Languages</h4></summary>
+					<ul>
+						<li>JavaScript</li>
+						<li>Ruby</li>
+						<li>Python</li>
+						<li>HTML</li>
+						<li>CSS</li>
 					</ul>
 				</details>
 
 				<details>
-					<summary>
-						<h3 class="about-myself__list-title">Frameworks</h3>
-						<i class="fa-solid fa-chevron-down"></i>
-					</summary>
-					<ul class="languages-ul">
-						<li class="lang-tags">React</li>
-						<li class="lang-tags">Rails</li>
+					<summary><h4>Frameworks</h4></summary>
+					<ul>
+						<li>React</li>
+						<li>Rails</li>
+						<li>Bootstrap</li>
 					</ul>
 				</details>
-			</section>
-		</div>
 
-		<section class="form-container" id="contact">
-			<h3 class="form-title">
-				Contact me
-			</h3>
-			<p class="form-p">
-				If you have an application you are interested in developing,
-				a feature that you need built or a project that needs coding. I’d love to help with it 
-			</p>
+				<details>
+					<summary><h4>Skills</h4></summary>
+					<ul>
+						<li>Redux</li>
+						<li>Webpack</li>
+						<li>MySQL</li>
+						<li>PostgreSQL</li>
+					</ul>
+				</details>
+			</div>
+		</section>
+
+		<section class="contact" id="contact">
+			<h2 class="form-title">Contact me</h2>
 			<form
-				class="form"
 				action="https://formspree.io/f/moqrapvz"
 				method="POST"
 				id="form"
 			>
-				<ul  class="form-ul">
-					<li class="input">
-						<input id="name"  type="text" placeholder="Name" name="user_name" maxlength="30" required>
-					</li>
-					<li class="input">
-						<input id="email" type="email" placeholder="E-mail" name="email" required>
-					</li>
-					<li class="input">
-						<textarea id="msg" name="message" placeholder="Write your message here..." rows="6" maxlength="500" required></textarea>
-					</li>
-					<li id="errorMsg" class="errorMsg"></li>
-					<li class="input i-button">
-						<button type="submit" class="btn-transition contact-button">Get in Touch</button>
-					</li>
-				</ul>
+				<p class="form-p">
+					If you have an application you are interested in developing,
+					a feature that you need built or a project that needs coding. I’d love to help with it 
+				</p>
+				<input id="name"  type="text" placeholder="Name" name="user_name" maxlength="30" required>
+				<input id="email" type="email" placeholder="E-mail" name="email" required>
+				<textarea
+						id="msg"
+						name="message"
+						placeholder="Write your message here..."
+						rows="6"
+						maxlength="500"
+						required
+				>
+				</textarea>
+				<button type="submit" class="btn btn-white">Get in Touch</button>
 			</form>
 		</section>
 
 		<div class="modal-container" id="modal-container"></div>
-</main>
+	</main>
 </body>
 </html>
