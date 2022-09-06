@@ -5,6 +5,9 @@
 :root {
   --primary-color: #0F3D3E;
   --secondary-color: #041C32;
+  --secondary-darker-color: #222831;
+  --accent-color: #ECB365;
+  --accent-darker-color: #603601;
   --grey-color: #100F0F;
   --white-color: #E2DCC8;
   --font-sans: 'Poppins', sans-serif;
@@ -21,7 +24,7 @@
 /* global selectors */
 
 h1 {
-  color: var(--white-color);
+  color: var(--accent-color);
   margin-bottom: 1.6rem;
   font-size: 4rem;
 }
@@ -114,6 +117,32 @@ form > textarea {
   border-radius: 1.2rem;
   padding: 1rem 2rem;
   font-size: 1.6rem;
+}
+
+.btn-white {
+  color: var(--accent-color);
+}
+
+.btn-white:hover {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+
+.btn-white:active {
+  background-color: var(--accent-darker-color);
+}
+
+/* .btn-black { */
+/*   color: var(--accent-color); */
+/* } */
+
+.btn-black:hover {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.btn-black:active {
+  background-color: var(--secondary-darker-color);
 }
 
 html {
@@ -214,7 +243,19 @@ main {
 }
 
 .fa-brands:hover {
-  color: purple;
+  color: var(--accent-color);
+}
+
+.fa-brands:active {
+  color: var(--accent-darker-color);
+}
+
+.about-myself .fa-brands:hover {
+  color: var(--primary-color);
+}
+
+.about-myself .fa-brands:active {
+  color: var(--secondary-color);
 }
 
 /* headline */
@@ -227,7 +268,7 @@ main {
 }
 
 .headline span {
-  color: var(--white-color);
+  color: var(--accent-color);
 }
 
 /* works */
@@ -358,7 +399,7 @@ details > ul > li:before {
 }
 
 .form-title {
-  color: var(--white-color);
+  color: var(--accent-color);
 }
 
 .form-p {
@@ -469,7 +510,6 @@ form .btn {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: var(--white-color);
     position: fixed;
     top: 0;
     left: 0;
@@ -487,6 +527,18 @@ form .btn {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  nav a {
+    color: var(--white-color);
+  }
+  
+  nav a:hover {
+    color: var(--accent-color);
+  }
+
+  nav a:active {
+    color: var(--accent-darker-color);
   }
 
   nav span {
@@ -582,6 +634,22 @@ form .btn {
 
   .modal-card {
     width: 95%;
+    padding: 8rem;
+  }
+
+  .modal-card p {
+    margin-top: 8rem;
+  }
+
+  .modal-card figure {
+    width: 86%;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 40px;
+    right: 70px;
+    z-index: 110;
   }
 
   .modal-wrap {
@@ -594,5 +662,11 @@ form .btn {
 
   .modal-footer {
     width: 50%;
+    height: 100%;
+  }
+
+  .modal-buttons {
+    justify-content: flex-start;
+    gap: 2rem;
   }
 }
