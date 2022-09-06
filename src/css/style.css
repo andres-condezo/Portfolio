@@ -3,13 +3,13 @@
 /* CSS variables */
 
 :root {
-  --primary-color: #0F3D3E;
-  --secondary-color: #041C32;
+  --primary-color: #0f3d3e;
+  --secondary-color: #041c32;
   --secondary-darker-color: #222831;
-  --accent-color: #ECB365;
+  --accent-color: #ecb365;
   --accent-darker-color: #603601;
-  --grey-color: #100F0F;
-  --white-color: #E2DCC8;
+  --grey-color: #100f0f;
+  --white-color: #e2dcc8;
   --font-sans: 'Poppins', sans-serif;
 }
 
@@ -45,7 +45,8 @@ h4 {
   margin: 2rem;
 }
 
-a, button {
+a,
+button {
   all: unset;
   cursor: pointer;
 }
@@ -64,7 +65,7 @@ section {
   padding: 18rem 3rem 12rem 3rem;
   border-radius: 0 0 0 40px;
   margin-top: -6rem;
-  box-shadow: 0 1rem 1rem -0.5rem rgba(0,0,0,0.2);
+  box-shadow: 0 1rem 1rem -0.5rem rgba(0, 0, 0, 0.2);
 }
 
 article {
@@ -133,7 +134,9 @@ form > textarea {
 }
 
 /* .btn-black { */
+
 /*   color: var(--accent-color); */
+
 /* } */
 
 .btn-black:hover {
@@ -180,9 +183,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 40px 40px 0px 0px;
+  border-radius: 40px 40px 0 0;
   z-index: 90;
-  box-shadow: 0rem 0rem 1rem 0.3rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1rem 0.3rem rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
@@ -304,7 +307,7 @@ main {
   margin-bottom: 3rem;
 }
 
-.tags-container li {
+.tags-container > ul > li {
   font-size: 1.4rem;
   background-color: var(--white-color);
   padding: 1rem;
@@ -327,16 +330,16 @@ main {
   margin-top: 4rem;
 }
 
-details {
+.about-myself details {
   margin: 0 auto;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   padding: 1rem;
   box-shadow: 0 0.1rem 1rem -0.5rem rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   overflow: hidden;
 }
 
-summary {
+.about-myself summary {
   padding: 1rem;
   display: block;
   padding-left: 2.2rem;
@@ -345,7 +348,7 @@ summary {
   color: var(--primary-color);
 }
 
-summary:before {
+.about-myself summary::before {
   content: '';
   font-size: 4rem;
   border-radius: 50%;
@@ -356,29 +359,29 @@ summary:before {
   top: 3.8rem;
   left: 1rem;
   transform: rotate(0);
-  transform-origin: .2rem 50%;
-  transition: .25s transform ease;
+  transform-origin: 0.2rem 50%;
+  transition: 0.25s transform ease;
 }
 
-details[open] > summary:before {
+.about-myself details[open] > summary::before {
   transform: rotate(90deg);
 }
 
-details summary::-webkit-details-marker {
-  display:none;
+.about-myself details summary::-webkit-details-marker {
+  display: none;
 }
 
-details > ul {
+.about-myself details > ul {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   flex-direction: column;
 }
 
-details > ul > li {
+.about-myself details > ul > li {
   margin-left: 4rem;
 }
 
-details > ul > li:before {
+.about-myself details > ul > li::before {
   content: '>';
   color: var(--primary-color);
   margin-right: 1rem;
@@ -404,9 +407,6 @@ details > ul > li:before {
 
 .form-p {
   color: white;
-}
-
-.form-p {
   margin-bottom: 4rem;
 }
 
@@ -420,7 +420,6 @@ form .btn {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
   height: 100vh;
-  position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
@@ -515,9 +514,9 @@ form .btn {
     left: 0;
     z-index: 90;
     background-color: var(--secondary-color);
-    box-shadow: 11px 1px 11px -5px rgba(0,0,0,0.38);
-    -webkit-box-shadow: 11px 1px 11px -5px rgba(0,0,0,0.38);
-    -moz-box-shadow: 11px 1px 11px -5px rgba(0,0,0,0.38);
+    box-shadow: 11px 1px 11px -5px rgba(0, 0, 0, 0.38);
+    -webkit-box-shadow: 11px 1px 11px -5px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 11px 1px 11px -5px rgba(0, 0, 0, 0.38);
   }
 
   nav ul {
@@ -532,7 +531,7 @@ form .btn {
   nav a {
     color: var(--white-color);
   }
-  
+
   nav a:hover {
     color: var(--accent-color);
   }
@@ -556,7 +555,7 @@ form .btn {
     padding: 18rem 0 12rem 0 !important;
     border-radius: 0 0 40px 0 !important;
     margin-top: -6rem;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2) !important;
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2) !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -618,7 +617,7 @@ form .btn {
     width: 40%;
     padding: 4rem;
   }
-  
+
   .about-myself-skills {
     width: 40%;
     padding: 4rem;
@@ -627,7 +626,7 @@ form .btn {
   .contact {
     border-radius: 0 0 0 0 !important;
   }
-  
+
   form {
     width: 50%;
   }

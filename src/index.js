@@ -41,7 +41,7 @@ function createCard(el) {
 `;
 }
 
-const myProjects = data.projects.map((el, index) => {
+const myProjects = data.projects.map((el) => {
   const article = document.createElement('article');
   article.className = 'works-card';
   article.innerHTML = createCard(el);
