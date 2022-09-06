@@ -307,7 +307,7 @@ main {
   margin-bottom: 3rem;
 }
 
-.tags-container > ul > li {
+.tags-container li {
   font-size: 1.4rem;
   background-color: var(--white-color);
   padding: 1rem;
