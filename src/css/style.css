@@ -307,7 +307,7 @@ main {
   margin-bottom: 3rem;
 }
 
-.tags-container > ul > li {
+.tags-container li {
   font-size: 1.4rem;
   background-color: var(--white-color);
   padding: 1rem;
@@ -387,9 +387,7 @@ main {
   margin-right: 1rem;
 }
 
-/* contact */
-
-.contact {
+/* contact */a .contact {
   color: var(--white-color);
   background-color: var(--secondary-color);
   padding: 15rem 4rem 18rem 4rem;
