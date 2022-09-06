@@ -1,6 +1,5 @@
 import './css/style.css';
 import './components/form.js';
-import './components/mobile-menu.js';
 import data from './data/project-data.json';
 
 // ***************
@@ -21,32 +20,30 @@ const createTags = (container, i) => {
 
 function createCard(el) {
   return `
-<figure class="snapshot">
-  <img src="${el.image}" alt="${el.name} project image">
-</figure>
-<section class="works__left-block">
-  <div class="works__primary-text">
-    <h3 class="works__project-title">${el.name}</h3>
-    <div class="frame-2">
+<figure><img src="${el.image}" alt="${el.name} project image"></figure>
+<div class="works-info">
+  <div class="block-u">
+    <h3>${el.name}</h3>
+    <div class="span-container">
+      <span>${el.company}</span>
       <div class="counter"></div>
-      <span class="role">${el.role}</span>
+      <span>${el.role}</span>
       <div class="counter"></div>
-      <span class="year">${el.year}</span>
+      <span>${el.year}</span>
     </div>
+    <p>${el.description}</p>
   </div>
-  <p class="works__primary-par">${el.description}</p>
-  <ul class="works__tags" id="${el.name}"> </ul>
-  <a href="#works__card2" class="btn-transition works__action" id="showModal">See Project</a>
-</section>
+  <div class="block-d">
+    <ul class="tags-container" id="${el.name}"> </ul>
+    <a href="#works-card" class="btn btn-black" id="showModal">See Project</a>
+  </div>
+</div>
 `;
 }
 
-const myProjects = data.projects.map((el, index) => {
+const myProjects = data.projects.map((el) => {
   const article = document.createElement('article');
-  article.className = 'works__card';
-  if (index % 2 === 1) {
-    article.classList.add('card2');
-  }
+  article.className = 'works-card';
   article.innerHTML = createCard(el);
   return article;
 });
@@ -65,35 +62,42 @@ for (let i = 0; i < myProjects.length; i += 1) {
 
 function createModal(el) {
   return `
-    <button type="button" class="close-button-2" id="close-button-2">x</button>
-    <section class="works__left-block modal__left-block">
-      <div class="works__primary-text">
-        <h3 class="modal__project-title">${el.name}</h3>
-        <div class="frame-2">
-          <div class="counter"></div>
-          <span class="role">${el.role}</span>
-          <div class="counter"></div>
-          <span class="year">${el.year}</span>
+    <button type="button" class="close-btn" id="close-btn">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="modal-wrap">
+      <div class="modal-header">
+        <div class="section-a">
+          <h3>${el.name}</h3>
+          <div class="span-container">
+            <span>${el.company}</span>
+            <div class="counter"></div>
+            <span>${el.role}</span>
+            <div class="counter"></div>
+            <span>${el.year}</span>
+          </div>
         </div>
+        <figure class="img-container">
+          <img src="${el.image}" alt="${el.name} project image">
+        </figure>
       </div>
-      <figure class="snapshot-modal">
-        <img class="img-modal" src="${el.image}" alt="${el.name} project image">
-      </figure>
-      <div class="modal__description">
-        <p class="modal__primary-par">${el.descriptionPopup}</p>
+
+      <div class="modal-footer">
+        <p class="modal-par">${el.descriptionPopup}</p>
         <div class="block-r">
-          <ul class="works__tags modal__tags" id="modal-id"> </ul>
+          <ul class="tags-container" id="modal-id"> </ul>
           <div class="modal-buttons">
-            <a href="${el.liveVersion}" target="_blank" rel="noopener noreferrer" class="btn-transition works__action modal-btn">
+            <a href="${el.liveVersion}" target="_blank" rel="noopener noreferrer" class="btn btn-black">
               See Live
             </a>
-            <a href="${el.source}" target="_blank" rel="noopener noreferrer" class="btn-transition works__action modal-btn">
+            <a href="${el.source}" target="_blank" rel="noopener noreferrer" class="btn btn-black">
               See Source
             </a>
           </div>
         </div>
       </div>
-    </section>
+
+    </div>
 `;
 }
 
@@ -123,7 +127,7 @@ modalBtn.forEach((el, i) => {
     const modalTags = document.getElementById('modal-id');
     createTags(modalTags, i);
 
-    const closeModalBtn = document.querySelector('#close-button-2');
+    const closeModalBtn = document.querySelector('#close-btn');
     closeModalBtn.addEventListener('click', closeModal);
   });
 });
