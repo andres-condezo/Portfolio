@@ -387,7 +387,9 @@ main {
   margin-right: 1rem;
 }
 
-/* contact */a .contact {
+/* contact */
+
+.contact {
   color: var(--white-color);
   background-color: var(--secondary-color);
   padding: 15rem 4rem 18rem 4rem;
