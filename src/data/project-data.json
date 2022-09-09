@@ -8,7 +8,7 @@
       "company": "Freelancer",
       "year": "2022",
       "role": "Front End",
-      "technologies": ["HTML", "CSS", "SCSS", "JavaScript", "React", "Redux"],
+      "technologies": ["React", "JavaScript", "Redux", "HTML", "CSS", "SCSS"],
       "liveVersion": "https://andres-condezo.github.io/stock-performance/",
       "source": "https://github.com/andres-condezo/stock-performance"
     },
@@ -20,7 +20,7 @@
       "company": "Freelancer",
       "year": "2022",
       "role": "Full Stack",
-      "technologies": ["Ruby", "Ruby on Rails", "HTML","CSS", "PostgreSQL"],
+      "technologies": ["Ruby", "Ruby on Rails", "Rspec", "HTML","CSS", "PostgreSQL"],
       "liveVersion": "https://protected-eyrie-07624.herokuapp.com/",
       "source": "https://github.com/andres-condezo/Budget_app"
     },
@@ -28,13 +28,12 @@
       "name": "Taste Food",
       "description": "Web app to record the different user interactions with recipes (likes, comments).",
       "descriptionPopup": "The Taste food web app is our JavaScript capstone project. Taste food is a web application based on an external food API, showing data about Italian foods and we used Used involvement API to record the different user interactions (likes, comments).",
-      "image": "https://raw.githubusercontent.com/andres-condezo/Portfolio/dev/src/img/tastefood-screenshot.png",
-      "company": "Freelancer",
+      "image": "https://user-images.githubusercontent.com/69616245/189245414-5341c09f-c27d-4f03-bace-a9e5fb53ce13.png",
       "year": "2022",
       "role": "Front End",
-      "technologies": ["JavaScript", "HTML","CSS", "Jest", "Webpack"],
-      "liveVersion": "https://bondok6.github.io/Taste-Food/",
-      "source": "https://github.com/Bondok6/Taste-Food"
+      "technologies": ["JavaScript", "Webpack", "Jest", "HTML", "CSS"],
+      "liveVersion": "bondok6.github.io/taste-food/",
+      "source": ""
     }
   ]
 }
