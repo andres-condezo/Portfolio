@@ -2,7 +2,7 @@
 // mobile menu
 // ***************
 
-const menu = document.querySelector('#menu-container');
+const menu = document.querySelector('#mobile-menu-container');
 const closeButton = document.querySelector('.close-button');
 const hamburguer = document.querySelector('#hamburguer-button');
 const body = document.querySelector('body');

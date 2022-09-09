@@ -5,6 +5,9 @@ module.exports = {
   mode: 'development',
   devServer: {
     static: './dist',
+    hot: true,
+    open: true,
+    watchFiles: ['src/**/*'],
   },
   output: {
     filename: 'main.js',
