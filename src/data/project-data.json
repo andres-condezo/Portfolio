@@ -32,8 +32,19 @@
       "year": "2022",
       "role": "Front End",
       "technologies": ["JavaScript", "Webpack", "Jest", "HTML", "CSS"],
-      "liveVersion": "bondok6.github.io/taste-food/",
-      "source": ""
+      "liveVersion": "http://kyrillos.me/Taste-Food/",
+      "source": "https://github.com/Bondok6/Taste-Food"
+    },
+    {
+      "name": "Rent a Car",
+      "description": "This project is full stack website for renting cars",
+      "descriptionPopup": "This project is full stack website for renting cars. The main view of the app presents a list of different cars to the user, allowing the user to view the details of each car, rent the car, and see the user's current rents.",
+      "image": "https://user-images.githubusercontent.com/61361037/186997206-ad3751ce-8a7e-4341-bfed-b140f9a79e7b.png",
+      "year": "2022",
+      "role": "Front End",
+      "technologies": ["React", "Redux", "Ruby", "Ruby on Rails", "Jest", "PostgreSQL", "HTML", "CSS"],
+      "liveVersion": "https://rent-a-car-frontend.netlify.app",
+      "source": "https://github.com/RaoAkif/RentACar-Frontend"
     }
   ]
 }
