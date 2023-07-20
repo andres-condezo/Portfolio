@@ -96,7 +96,6 @@ function createModal(el) {
           </div>
         </div>
       </div>
-
     </div>
 `;
 }
