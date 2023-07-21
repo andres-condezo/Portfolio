@@ -35,7 +35,7 @@ function createCard(el) {
   </div>
   <div class="block-d">
     <ul class="tags-container" id="${el.name}"> </ul>
-    <a href="#works-card" class="btn btn-black" id="showModal">See Project</a>
+    <a href="#works-card" class="btn btn-black bg-transition" id="showModal">See Project</a>
   </div>
 </div>
 `;
@@ -87,10 +87,10 @@ function createModal(el) {
         <div class="block-r">
           <ul class="tags-container" id="modal-id"> </ul>
           <div class="modal-buttons">
-            <a href="${el.liveVersion}" target="_blank" rel="noopener noreferrer" class="btn btn-black">
+            <a href="${el.liveVersion}" target="_blank" rel="noopener noreferrer" class="btn btn-black bg-transition">
               See Live
             </a>
-            <a href="${el.source}" target="_blank" rel="noopener noreferrer" class="btn btn-black">
+            <a href="${el.source}" target="_blank" rel="noopener noreferrer" class="btn btn-black bg-transition">
               See Source
             </a>
           </div>
