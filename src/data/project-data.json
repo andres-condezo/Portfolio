@@ -13,16 +13,16 @@
       "source": "https://github.com/andres-condezo/stock-performance"
     },
     {
-      "name": "Buget App",
-      "description": "Mobile web application where you can manage your budget",
-      "descriptionPopup": "Budget app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.",
-      "image": "https://raw.githubusercontent.com/andres-condezo/Portfolio/dev/src/img/budget-app-screenshot.png",
+      "name": "Space Travelers",
+      "description": "A web application for a company that provides commercial and scientific space travel services.",
+      "descriptionPopup": "Space Travelers is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.",
+      "image": "https://media.licdn.com/dms/image/sync/C4D27AQEdXnQC2zvYsQ/articleshare-shrink_800/0/1689306796193?e=1690506000&v=beta&t=bbtp3ahrfOKZLgybznjD43vQ0hNReE7B0iuRrCC3SL4",
       "company": "Freelancer",
       "year": "2022",
-      "role": "Full Stack",
-      "technologies": ["Ruby", "Ruby on Rails", "Rspec", "HTML","CSS", "PostgreSQL"],
-      "liveVersion": "https://protected-eyrie-07624.herokuapp.com/",
-      "source": "https://github.com/andres-condezo/Budget_app"
+      "role": "Front End",
+      "technologies": ["React", "Redux", "JavaScript", "Rest Api", "SCSS"],
+      "liveVersion": "https://space-travelers-az.netlify.app",
+      "source": "https://github.com/zhadier/space-travelers"
     },
     {
       "name": "Taste Food",
