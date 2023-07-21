@@ -112,6 +112,11 @@ form > textarea {
   font-family: var(--font-sans);
 }
 
+.bg-transition {
+  -webkit-transition: background 0.3s; /* For Safari 3.0 to 6.0 */
+  transition: background 0.3s; /* For modern browsers */
+}
+
 .btn {
   display: inline-block;
   border: 1px solid;
@@ -237,6 +242,8 @@ main {
   font-size: 2.6rem;
   margin-left: 1rem;
   color: var(--neutral-color);
+  -webkit-transition: color 0.3s; /* For Safari 3.0 to 6.0 */
+  transition: color 0.3s; /* For modern browsers */
 }
 
 .fa-brands:hover {
@@ -284,7 +291,7 @@ main {
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
-  color: grey;
+  color: black;
   font-size: 1.4rem;
 }
 
@@ -479,16 +486,13 @@ form .btn {
 /* animations */
 @keyframes slidein {
   from {
-    margin-left: 100%;
-    width: 300%;
+    opacity: 0;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    opacity: 1;
   }
 }
-
 /* media queries */
 
 @media only screen and (min-width: 780px) {
@@ -525,6 +529,8 @@ form .btn {
 
   nav a {
     color: var(--white-color);
+    -webkit-transition: color 0.3s; /* For Safari 3.0 to 6.0 */
+    transition: color 0.3s; /* For modern browsers */
   }
 
   nav a:hover {
@@ -579,7 +585,7 @@ form .btn {
     padding: 4rem;
   }
 
-  .works-card:nth-child(2) {
+  .works-card:nth-child(even) {
     flex-direction: row-reverse;
   }
 
