@@ -3,7 +3,7 @@
     {
       "name": "Stock Performance",
       "description": "Stock performance is a web application to check out performance by company to see which one performs the best, based on an external API provided by Financial Modeling Prep.",
-      "image": "https://raw.githubusercontent.com/andres-condezo/Portfolio/dev/src/img/stock-performance-screenshot.jpeg",
+      "image": "https://raw.githubusercontent.com/andres-condezo/Portfolio/dev/src/img/stock-performance-screenshot-responsive.jpeg",
       "company": "Freelancer",
       "year": "2022",
       "role": "Front End",
@@ -14,7 +14,7 @@
     {
       "name": "Space Travelers",
       "description": "Space Travelers is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.",
-      "image": "https://raw.githubusercontent.com/andres-condezo/Portfolio/dev/src/img/space-travelers-screenshot.jpeg",
+      "image": "https://raw.githubusercontent.com/andres-condezo/Portfolio/dev/src/img/space-travelers-screenshot-responsive.jpeg",
       "company": "Freelancer",
       "year": "2022",
       "role": "Front End",
