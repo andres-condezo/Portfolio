@@ -86,7 +86,7 @@ img {
   width: 100%;
   height: 100%;
   border-radius: 1.4rem;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 p {
@@ -132,12 +132,6 @@ form > textarea {
 .btn-white:active {
   background-color: var(--accent-darker-color);
 }
-
-/* .btn-black { */
-
-/*   color: var(--accent-color); */
-
-/* } */
 
 .btn-black:hover {
   background-color: var(--secondary-color);
@@ -282,7 +276,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 6rem;
+  gap: 3rem;
   z-index: 30;
 }
 
@@ -446,6 +440,7 @@ form .btn {
   padding-top: 2rem;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 
 .modal-wrap {
@@ -496,7 +491,7 @@ form .btn {
 
 /* media queries */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 780px) {
   header {
     all: unset;
     width: 8rem;
@@ -589,6 +584,7 @@ form .btn {
   }
 
   .works-info {
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -601,6 +597,7 @@ form .btn {
   figure {
     width: 50%;
     height: 36rem;
+    min-height: 36rem;
     margin: 0;
   }
 

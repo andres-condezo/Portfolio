@@ -4,7 +4,7 @@
       "name": "Stock Performance",
       "description": "Web application to check out performance by company",
       "descriptionPopup": "Stock performance is a web application to check out performance by company to see which one performs the best, based on an external API provided by Financial Modeling Prep.",
-      "image": "https://raw.githubusercontent.com/andres-condezo/stock-performance/development/src/assets/screenshot-desktop.png",
+      "image": "https://raw.githubusercontent.com/andres-condezo/Portfolio/dev/src/img/stock-performance-screenshot.jpeg",
       "company": "Freelancer",
       "year": "2022",
       "role": "Front End",
