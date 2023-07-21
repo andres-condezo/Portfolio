@@ -24,7 +24,7 @@
     },
     {
       "name": "Taste Food",
-      "description": "The Taste food web app is our JavaScript capstone project. Taste food is a web application based on an external food API, showing data about Italian foods and we used Used involvement API to record the different user interactions (likes, comments).",
+      "description": "A web application that revolves around a diverse collection of delicious recipes. Powered by an external food API, Taste Food showcases an array of culinary delights while seamlessly integrating the User Involvement API to record and display user interactions such as likes and comments",
       "image": "https://user-images.githubusercontent.com/69616245/189245414-5341c09f-c27d-4f03-bace-a9e5fb53ce13.png",
       "company": "Freelancer",
       "year": "2022",
@@ -35,7 +35,7 @@
     },
     {
       "name": "Rent a Car",
-      "description": "This project is full stack website for renting cars. The main view of the app presents a list of different cars to the user, allowing the user to view the details of each car, rent the car, and see the user's current rents.",
+      "description": "This project is a full stack website for renting cars. The main view of the app presents a list of different cars to the user, allowing the user to view the details of each car, rent the car, and see the user's current rents.",
       "image": "https://user-images.githubusercontent.com/61361037/186997206-ad3751ce-8a7e-4341-bfed-b140f9a79e7b.png",
       "company": "Freelancer",
       "year": "2022",
