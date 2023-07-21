@@ -113,6 +113,16 @@ form > textarea {
   font-family: var(--font-sans);
 }
 
+.email {
+  width: auto;
+  font-size: 1rem;
+  padding-bottom: 3rem;
+}
+
+.fa-envelope {
+  display: none;
+}
+
 .bg-transition {
   -webkit-transition: background 0.3s; /* For Safari 3.0 to 6.0 */
   transition: background 0.3s; /* For modern browsers */
@@ -497,6 +507,10 @@ form .btn {
 /* media queries */
 
 @media only screen and (min-width: 281px) {
+  .email {
+    font-size: 1.4rem;
+  }
+
   .about-myself {
     background-color: var(--white-color);
     padding: 15rem 4rem 12rem 4rem;
@@ -513,6 +527,12 @@ form .btn {
 }
 
 @media only screen and (min-width: 912px) {
+  .fa-envelope {
+    display: inline;
+    margin-right: 0.3rem;
+    font-size: 1.2rem;
+  }
+
   header {
     all: unset;
     width: 8rem;
