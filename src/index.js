@@ -83,7 +83,7 @@ function createModal(el) {
       </div>
 
       <div class="modal-footer">
-        <p class="modal-par">${el.descriptionPopup}</p>
+        <p class="modal-par">${el.description}</p>
         <div class="block-r">
           <ul class="tags-container" id="modal-id"> </ul>
           <div class="modal-buttons">

@@ -62,7 +62,7 @@ li {
 
 section {
   width: 100%;
-  padding: 18rem 3rem 12rem 3rem;
+  padding: 18rem 0 12rem 0;
   border-radius: 0 0 0 40px;
   margin-top: -6rem;
   box-shadow: 0 1rem 1rem -0.5rem rgba(0, 0, 0, 0.2);
@@ -91,6 +91,7 @@ img {
 
 p {
   margin-bottom: 3rem;
+  text-align: justify;
 }
 
 form {
@@ -319,7 +320,7 @@ main {
 
 .about-myself {
   background-color: var(--white-color);
-  padding: 15rem 4rem 12rem 4rem;
+  padding: 15rem 1rem 12rem 1rem;
   z-index: 20;
 }
 
@@ -495,7 +496,23 @@ form .btn {
 }
 /* media queries */
 
-@media only screen and (min-width: 780px) {
+@media only screen and (min-width: 281px) {
+  .about-myself {
+    background-color: var(--white-color);
+    padding: 15rem 4rem 12rem 4rem;
+    z-index: 20;
+  }
+
+  section {
+    width: 100%;
+    padding: 18rem 3rem 12rem 3rem;
+    border-radius: 0 0 0 40px;
+    margin-top: -6rem;
+    box-shadow: 0 1rem 1rem -0.5rem rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media only screen and (min-width: 912px) {
   header {
     all: unset;
     width: 8rem;
