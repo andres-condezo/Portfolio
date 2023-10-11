@@ -11,6 +11,16 @@
    to = "/index.html"
    status = 200
 
+  [[redirects]]
+  from = "/stext"
+  to = "/srctext"
+  status = 200
+
+  [[redirects]]
+  from = "/rtext"
+  to = "/roottext"
+  status = 200
+
   ## (optional) Settings for Netlify Dev
   ## https://github.com/netlify/cli/blob/main/docs/netlify-dev.md#project-detection
   #[dev]

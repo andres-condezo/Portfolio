@@ -1,0 +1,579 @@
+"--------------------------------
+"-------------------------------- OPTIONS 
+filetype plugin indent on
+syntax enable
+
+set ignorecase
+set smartcase
+set path+=**
+set termguicolors            " Active true colors en la terminal
+set nocompatible
+set numberwidth=1
+set showcmd
+set cmdheight=2
+set showmatch
+set title
+set noswapfile
+set pumheight=10             " Makes pop up menu smaller
+set spelllang=en,es          " Corregir palabras usando diccionarios en inglés y español
+set fileencoding=utf-8       " The encoding written to file
+set encoding=utf-8           " The encoding displayed
+set ruler                               " Show the cursor position all the time
+set cmdheight=2                         " More space for displaying messages
+set iskeyword+=-                        " treat dash separated words as a word text object"
+set mouse=a                             " Enable your mouse
+set splitbelow                          " Horizontal splits will automatically be below
+set splitright                          " Vertical splits will automatically be to the right
+set t_Co=256                            " Support 256 colors
+set conceallevel=0                      " So that I can see `` in markdown files
+set shiftwidth=2
+set smartindent                         " Makes indenting smart
+set autoindent                          " Good auto indent
+set number                              " Line numbers
+set relativenumber
+set cursorline                          " Enable highlighting of the current line
+set background=dark                     " tell vim what the background color looks like
+set hidden
+set nobackup                            " This is recommended by coc
+set nowritebackup                       " This is recommended by coc
+set updatetime=300                      " Faster completion
+set timeoutlen=500                      " By default timeout Len is 1000 ms
+set autochdir                           " Your working directory will always be the same as your working directory
+set hlsearch
+set incsearch
+" set clipboard=unnamedplus
+set go+=a
+set whichwrap+=<,>,[,],h,l
+set listchars=eol:¬,tab:▷▷⋮,trail:~,extends:>,precedes:<,space:·
+set shortmess=c
+set showtabline=2
+set scrolloff=7
+set sidescrolloff=7
+set list 
+" set invlist
+set wildchar=<Tab>
+set wildmenu
+set wildmode=list,full
+set wildcharm=<C-Z>
+" set wildmode=longest,list,full
+
+" Let's save undo info!
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0770)
+endif
+if !isdirectory($HOME."/.vim/undo-dir")
+    call mkdir($HOME."/.vim/undo-dir", "", 0700)
+endif
+set undodir=~/.vim/undo-dir
+set undofile
+
+"--------------------------------
+"-------------------------------- MAPLEADER
+let mapleader=" "
+
+"--------------------------------
+"-------------------------------- COLOR SCHEME
+colorscheme desert
+set background=dark                     " tell vim what the background color looks like
+
+"--------------------------------
+"--------------------------------  STATUSLINE
+" set laststatus=0                        " Always display the status line
+set laststatus=2
+
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':'   '
+endfunction
+
+set statusline=
+set statusline+=%#PmenuSel#
+set statusline+=%{StatuslineGit()}
+set statusline+=%#LineNr#
+set statusline+=\ %f
+set statusline+=%m\
+set statusline+=%=
+set statusline+=%#CursorColumn#
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
+set statusline+=\ 
+
+"--------------------------------
+"-------------------------------- KEYMAPS
+execute "set <M-h>=\eh"
+execute "set <M-j>=\ej"
+execute "set <M-k>=\ek"
+execute "set <M-l>=\el"
+
+" inoremap ji <ESC>
+
+vnoremap p "_dP
+
+nmap <Leader>ww :w!<CR>
+nmap <Leader>wa <cmd>execute ':wa' <bar> wq<CR>
+nmap <Leader>wq :wq<CR>
+nmap <Leader>ws <cmd>execute ':silent! w !sudo tee % > /dev/null' <bar> edit!<CR>
+nmap <Leader>q :q!<CR>
+nmap <Leader>Q :qa!<CR>
+
+map <Leader>ll :setlocal spell! spelllang=en_us<CR>
+
+" Enable and disable  autocoment
+autocmd FileType * set formatoptions-=cro
+map mcn :set formatoptions-=cro<CR>
+map mcy :set formatoptions=cro<CR>
+
+nmap <Leader>rp :%s//gIc<Left><Left><Left><Left>
+
+nnoremap <C-j> J
+nnoremap <C-k> K
+
+nnoremap J }
+nnoremap K {
+vnoremap J }
+vnoremap K {
+
+vnoremap > >gv
+vnoremap < <gv
+
+nnoremap n nzz
+nnoremap N Nzz
+
+nnoremap U <C-r>
+nnoremap <leader>u :exec 'undo' undotree()['seq_last']<CR>
+
+command! Reload execute "source ~/.vimrc"
+nnoremap <C-r> :Reload<CR>
+
+nnoremap <Leader>sc :colorscheme <C-z><C-z>
+" nnoremap <Leader>sh :History<CR>
+
+nnoremap ,s /
+nnoremap ,e :e .env<CR>
+nnoremap ,r :e requests.http<CR>
+
+nnoremap <C-l> :noh<CR>
+
+nnoremap <Leader>d :tab DBUI<CR>
+
+vnoremap <C-n> :norm
+
+" Move text up and down
+vnoremap <M-j> :move '>+1<CR>gv-gv
+vnoremap <M-k> :move '<-2<CR>gv-gv
+
+"--------------------------------
+"-------------------------------- NETRW
+" nnoremap <Leader>e :Vexplore<CR> 
+nnoremap <Leader>e :Lexplore<CR>
+nnoremap <leader>dd :Lexplore %:p:h<CR>
+nnoremap <Leader>da :Lexplore<CR>
+
+let g:netrw_keepdir = 0
+let g:netrw_winsize = 30
+let g:netrw_banner = 0
+let g:netrw_localcopydircmd = 'cp -r'
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 0
+
+hi! link netrwMarkFile Search
+
+function! NetrwMapping()
+endfunction
+
+augroup netrw_mapping
+  autocmd!
+  autocmd filetype netrw call NetrwMapping()
+augroup END
+
+function! NetrwMapping()
+  nmap <buffer> H u
+  nmap <buffer> h -^
+  nmap <buffer> l <CR>:Lexplore<CR>
+  " nmap <buffer> L <CR>:Lexplore<CR>
+
+  nmap <buffer> . gh
+  nmap <buffer> P <C-w>z
+
+  nmap <buffer> <Leader>dd :Lexplore<CR>
+
+  nmap <buffer> <TAB> mf
+  nmap <buffer> <S-TAB> mF
+  nmap <buffer> <Leader><TAB> mu
+
+  nmap <buffer> <TAB> mf
+  nmap <buffer> <S-TAB> mF
+  " nmap <buffer> <Leader><TAB> mu
+
+  nmap <buffer> fa %:w<CR>:buffer #<CR>
+  nmap <buffer> fA d
+  nmap <buffer> fd D
+  nmap <buffer> fr R
+  nmap <buffer> fc mc
+  nmap <buffer> fC mtmc
+  nmap <buffer> fx mm
+  nmap <buffer> fX mtmm
+  " nmap <buffer> f; mx
+
+  nmap <buffer> fl :echo join(netrw#Expose("netrwmarkfilelist"), "\n")<CR>
+  nmap <buffer> fq :echo 'Target:' . netrw#Expose("netrwmftgt")<CR>
+  nmap <buffer> fd mtfq
+endfunction
+
+"--------------------------------
+"-------------------------------- TABS
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set shiftround
+set smarttab
+set noexpandtab
+
+"----------------------------------
+"---------------------------------- BUFFERS
+map <S-h> :bprevious<CR>
+map <S-l> :bnext<CR>
+map <Leader>c :bdelete<CR>
+map <Leader>o :on<CR>
+
+" nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap <Leader>b :buffers<CR>:buffer<C-Z><Space>
+
+nnoremap <Leader>bv :buffers<CR>:vert sbuffer<Space>
+nnoremap <Leader>bh :buffers<CR>:sbuffer<Space>
+nnoremap <Leader>bd :buffers<CR>:bdelete<Space>
+
+" more commands
+" nnoremap mb :b <C-Z>
+
+" let c = 1
+" while c <= 99
+  " execute "nnoremap " . c . "g :" . c . "b\<CR>"
+  " let c += 1
+" endwhile
+
+
+"----------------------------------
+"---------------------------------- bf 1
+command -bar -bang Ls call s:ls(<bang>0)
+
+function s:ls(bang) abort
+    let bufnrs = range(1, bufnr('$'))
+    call filter(bufnrs, a:bang ? {_, v -> bufexists(v)} : {_, v -> buflisted(v)})
+    let bufnames = copy(bufnrs)
+        \ ->map({_, v -> bufname(v)->fnamemodify(':t')})
+    let uniq_flags = copy(bufnames)->map({_, v -> count(bufnames, v) == 1})
+    let items = map(bufnrs, {i, v -> #{
+        \ bufnr: v,
+        \ text: s:gettext(v, uniq_flags[i]),
+        \ }})
+    call setloclist(0, [], ' ', #{
+        \ items: items,
+        \ title: 'ls' .. (a:bang ? '!' : ''),
+        \ quickfixtextfunc: 's:quickfixtextfunc',
+        \ })
+    lopen
+    nmap <buffer><nowait><expr><silent> <cr> <sid>Cr()
+endfunction
+
+function s:Cr()
+    if w:quickfix_title =~# '^ls!\=$'
+        let locid = win_getid()
+        return "\<c-w>\<cr>\<plug>(close-location-window)" .. locid .. "\<cr>\<plug>(verticalize)"
+    else
+        return "\<c-w>\<cr>\<plug>(verticalize)"
+    endif
+endfunction
+nnoremap <plug>(close-location-window) :<c-u>call <sid>CloseLocationWindow()<cr>
+nnoremap <plug>(verticalize) :<c-u>wincmd L<cr>
+function s:CloseLocationWindow()
+    let locid = input('')->str2nr()
+    call win_execute(locid, 'close')
+endfunction
+
+function s:gettext(v, is_uniq) abort
+    let format = ' %*d%s%s%s%s%s %s'
+    let bufnr = [bufnr('$')->len(), a:v]
+    let buflisted = !buflisted(a:v) ? 'u': ' '
+    let cur_or_alt = a:v == bufnr('%') ? '%' : a:v == bufnr('#') ? '#' : ' '
+    let active_or_hidden = win_findbuf(a:v)->empty() ? 'h' : 'a'
+    let modifiable = getbufvar(a:v, '&ma', 0) ? ' ' : '-'
+    let modified = getbufvar(a:v, '&mod', 0) ? '+' : ' '
+    let bufname = bufname(a:v)->empty()
+        \ ?  '[No Name]'
+        \ :   bufname(a:v)->fnamemodify(a:is_uniq ? ':t' : ':p')
+    return call('printf', [format]
+        \ + bufnr
+        \ + [buflisted, cur_or_alt, active_or_hidden, modifiable, modified, bufname])
+endfunction
+
+function s:quickfixtextfunc(info) abort
+    let items = getloclist(a:info.winid, #{id : a:info.id, items : 1}).items
+    let l = []
+    for idx in range(a:info.start_idx - 1, a:info.end_idx - 1)
+        call add(l, items[idx].text)
+    endfor
+    return l
+endfunction
+
+"----------------------------------
+"---------------------------------- bf 2
+function! GetActiveBuffers()
+    let l:blist = getbufinfo({'bufloaded': 1, 'buflisted': 1})
+    let l:result = []
+    for l:item in l:blist
+        "skip unnamed buffers; also skip hidden buffers?
+        if empty(l:item.name) || l:item.hidden
+            continue
+        endif
+        call add(l:result, shellescape(l:item.name))
+    endfor
+    return l:result
+endfunction
+
+"----------------------------------
+"---------------------------------- SPLITS
+" Remove pipes
+set fillchars+=vert:\ "
+
+" Splits
+nnoremap <Leader>h :split<CR>
+nnoremap <Leader>v :vsplit<CR>
+"resize splits
+nnoremap <silent> <Left> :vertical resize +5<CR>
+nnoremap <silent> <Right> :vertical resize -5<CR>
+nnoremap <silent> <Up> :resize +3<CR>
+nnoremap <silent> <Down> :resize -3<CR>
+nnoremap <silent> <C-w><C-e> <C-w>=
+
+nnoremap <silent> <C-Left> 7zh
+nnoremap <silent> <C-Right> 7zl
+nnoremap <silent> <C-Up> 7<C-y>
+nnoremap <silent> <C-Down> 7<C-e>
+
+" Splits navigation
+nnoremap <M-h> <C-w>h
+nnoremap <M-j> <C-w>j
+nnoremap <M-k> <C-w>k
+nnoremap <M-l> <C-w>l
+
+" Change splits from vertical to horizontal or vice versa
+map <Leader>sv <C-w>t<C-w>H
+map <Leader>sh <C-w>t<C-w>K
+
+" Swap split
+map <C-x> <C-w>R
+
+"----------------------------------
+"---------------------------------- TERMINAL
+
+map <Leader>th :terminal<CR>
+map <Leader>tv :vert term<CR>
+" start terminal in insert mode
+au BufEnter * if &buftype == 'terminal' | :startinsert | endif
+
+" Splits navigation from terminal
+tnoremap <C-j>  <C-\><C-n><C-w>j
+tnoremap <C-k>  <C-\><C-n><C-w>k
+tnoremap <C-l>  <C-\><C-n><C-w>l
+tnoremap <C-h>  <C-\><C-n><C-w>h
+" Resize splits from terminal
+tnoremap <silent> <C-Up> :resize +3<CR>
+tnoremap <silent> <C-Down> :resize -3<CR>
+tnoremap <silent> <C-Left> :vertical resize +5<CR>
+tnoremap <silent> <C-Right> :vertical resize -5<CR>
+
+"--------------------------------
+"-------------------------------- SURROUND
+function! WrapSelect (front)
+    "puts characters around the selected text.
+    let l:front = a:front
+    if (a:front == '[')
+        let l:back = ']'
+    elseif (a:front == '(')
+        let l:back = ')'
+    elseif (a:front == '{')
+        let l:back = '}'
+    elseif (a:front == '<')
+        let l:back = '>'
+    elseif (a:front =~ " ")
+        let l:split = split(a:front)
+        let l:back = l:split[1]
+        let l:front = l:split[0]
+    else
+        let l:back = a:front
+    endif
+    "execute: concat all these strings. '.' means "concat without spaces"
+    "norm means "run in normal mode and also be able to use \<C-x> characters"
+    "gv means "get the previous visual selection back up"
+    "c means "cut visual selection and go to insert mode"
+    "\<C-R> means "insert the contents of a register. in this case, the
+    "default register"
+    execute 'norm! gvc' . l:front. "\<C-R>\""  . l:back
+endfunction
+vnoremap S :<C-u>call WrapSelect(input('Wrapping? Give both (space separated) or just the first one: '))<cr>
+
+function! StripWrap()
+  normal `>x`<x
+endfunction
+vnoremap ds <esc>:call StripWrap()<cr>
+
+"--------------------------------
+"-------------------------------- FUNCTIONS
+
+nnoremap <Leader>ñ <cmd>echo ''<cr>
+
+" Remember line number
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
+
+" Fix cursor
+if &term =~ '^xterm'
+  " normal mode
+  let &t_EI .= "\<Esc>[0 q"
+  " insert mode
+  let &t_SI .= "\<Esc>[6 q"
+endif
+
+noremap <silent> mtn :set relativenumber!<CR>
+noremap <silent> mtw :set wrap!<CR>
+noremap <silent> mtl :set list!<CR>
+
+function! Test()
+  echo "my fun"
+endfunction
+noremap <silent> mtt <cmd>call Test()<CR>
+
+"--------------------------------
+"-------------------------------- CUSTOM MODES
+" function! NormalMode()
+  " if exists('b:WindowsMode')
+    " unlet b:WindowsMode
+  " endif
+  " colorscheme desert
+" endfunction
+" noremap <C-i> <cmd>call NormalMode()<CR>
+
+"--- WINDOWS MODE
+
+" function! WindowsMode()
+  " let b:WindowsMode=1
+  " colorscheme evening
+" endfunction
+" nnoremap <silent> mhw <cmd>call WindowsMode()<Cr>
+
+" Resize
+" nnoremap <expr> < exists('b:WindowsMode') ? ':vertical resize +5<CR>' : '<' 
+" nnoremap <expr> > exists('b:WindowsMode') ? ':vertical resize -5<CR>' : '>' 
+" nnoremap <expr> + exists('b:WindowsMode') ? ':resize +3<CR>' : '+' 
+" nnoremap <expr> - exists('b:WindowsMode') ? ':resize -3<CR>' : '-' 
+" nnoremap <expr> = exists('b:WindowsMode') ? '<C-w>=' : '=' 
+
+" Scroll
+" nnoremap <expr> h exists('b:WindowsMode') ? '7zh' : 'h' 
+" nnoremap <expr> l exists('b:WindowsMode') ? '7zl' : 'l' 
+" nnoremap <expr> k exists('b:WindowsMode') ? '7<C-y>' : 'k' 
+" nnoremap <expr> j exists('b:WindowsMode') ? '7<C-e>' : 'j' 
+
+"--------------------------------
+"-------------------------------- COMMENT
+let s:comment_map = {
+    \   "c": '\/\/',
+    \   "cpp": '\/\/',
+    \   "go": '\/\/',
+    \   "java": '\/\/',
+    \   "javascript": '\/\/',
+    \   "lua": '--',
+    \   "scala": '\/\/',
+    \   "php": '\/\/',
+    \   "python": '#',
+    \   "ruby": '#',
+    \   "rust": '\/\/',
+    \   "sh": '#',
+    \   "desktop": '#',
+    \   "fstab": '#',
+    \   "conf": '#',
+    \   "profile": '#',
+    \   "bashrc": '#',
+    \   "zsh": '#',
+    \   "tmux": '#',
+    \   "bash_profile": '#',
+    \   "mail": '>',
+    \   "eml": '>',
+    \   "bat": 'REM',
+    \   "ahk": ';',
+    \   "vim": '"',
+    \   "tex": '%',
+    \ }
+
+function! ToggleComment()
+  if has_key(s:comment_map, &filetype)
+    let comment_leader = s:comment_map[&filetype]
+    if getline('.') =~ "^\\s*" . comment_leader . " " 
+      " Uncomment the line
+      execute "silent s/^\\(\\s*\\)" . comment_leader . " /\\1/"
+    else 
+      if getline('.') =~ "^\\s*" . comment_leader
+        " Uncomment the line
+        execute "silent s/^\\(\\s*\\)" . comment_leader . "/\\1/"
+      else
+        " Comment the line
+        execute "silent s/^\\(\\s*\\)/\\1" . comment_leader . " /"
+      end
+    end
+  else
+    echo "No comment leader found for filetype"
+  end
+endfunction
+
+map gc :call ToggleComment()<cr>
+
+"--------------------------------
+"-------------------------------- FZF
+function! FZF() abort
+    let l:tempname = tempname()
+    " fzf | awk '{ print $1":1:0" }' > file
+    execute 'silent !fzf --multi ' . '| awk ''{ print $1":1:0" }'' > ' . fnameescape(l:tempname)
+    try
+        execute 'cfile ' . l:tempname
+        redraw!
+    finally
+        call delete(l:tempname)
+    endtry
+endfunction
+
+" :Files
+command! -nargs=* Files call FZF()
+
+" \ff
+nnoremap <leader>f :Files<cr>
+
+function! RG(args) abort
+    let l:tempname = tempname()
+    let l:pattern = '.'
+    if len(a:args) > 0
+        let l:pattern = a:args
+    endif
+    " rg --vimgrep <pattern> | fzf -m > file
+    execute 'silent !rg --vimgrep ''' . l:pattern . ''' | fzf -m > ' . fnameescape(l:tempname)
+    try
+        execute 'cfile ' . l:tempname
+        redraw!
+    finally
+        call delete(l:tempname)
+    endtry
+endfunction
+
+" :Rg [pattern]
+command! -nargs=* Rg call RG(<q-args>)
+
+" \fs
+nnoremap <leader>F :Rg<cr>
